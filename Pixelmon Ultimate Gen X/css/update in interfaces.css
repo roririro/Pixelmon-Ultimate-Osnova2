@@ -1,0 +1,243 @@
+/* Общие стили для секции */
+.roririro-questnew-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.roririro-questnew-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Общие стили для карточек */
+.roririro-questnew-card {
+  position: relative;
+  padding: 40px;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: white;
+  transition: all 0.3s ease;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.roririro-questnew-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Стили для изображения сверху */
+.roririro-questnew-additional-image {
+  max-width: 320px;
+  position: relative;
+  z-index: 2;
+  margin: -60px auto 30px auto;
+  display: block;
+  filter: drop-shadow(0 5px 15px rgba(218, 86, 112, 0.4));
+  transform-style: preserve-3d;
+  animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Цветовые схемы для карточек */
+.roririro-questnew-card:nth-child(1) {
+  --roririro-primary: #da5570;
+  --roririro-secondary: #ff0015; 
+  --roririro-accent: #ff5656;
+  --roririro-dark: #2D3436;
+}
+
+.roririro-questnew-card:nth-child(2)  {
+  --roririro-primary: #da5570;
+  --roririro-secondary: #ff0015; 
+  --roririro-accent: #ff5656;
+  --roririro-dark: #2D3436;
+}
+
+.roririro-questnew-card:nth-child(3) {
+  --roririro-primary: #da5570;
+  --roririro-secondary: #ff0015; 
+  --roririro-accent: #ff5656;
+  --roririro-dark: #2D3436;
+}
+
+/* Остальные стили (аналогично вашему исходному коду) */
+.roririro-questnew-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.roririro-questnew-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.roririro-questnew-content-wrap {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.roririro-questnew-feature-block {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+}
+
+.roririro-questnew-img-box {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.roririro-questnew-feature-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.roririro-questnew-img-box:hover .roririro-questnew-feature-img {
+  transform: scale(1.05);
+}
+
+.roririro-questnew-img-border {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--roririro-primary), var(--roririro-secondary));
+  border-radius: 18px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.roririro-questnew-text-block {
+  flex: 1;
+}
+
+.roririro-questnew-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--roririro-primary), var(--roririro-secondary));
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.roririro-questnew-title {
+  font-size: 1.6rem;
+  color: var(--roririro-dark);
+  margin-bottom: 15px;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+}
+
+.roririro-questnew-title:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--roririro-primary), var(--roririro-secondary));
+}
+
+.roririro-questnew-desc {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--roririro-dark);
+  margin-bottom: 25px;
+}
+
+.roririro-questnew-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: auto;
+}
+
+.roririro-questnew-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roririro-questnew-stat-number {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--roririro-primary);
+  line-height: 1;
+}
+
+.roririro-questnew-stat-text {
+  font-size: 1rem;
+  color: var(--roririro-dark);
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+  .roririro-questnew-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .roririro-questnew-container {
+    grid-template-columns: 1fr;
+  max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .roririro-questnew-card {
+    padding: 30px;
+    border-radius: 40px;
+    min-height: auto;
+  }
+  
+  .roririro-questnew-title {
+    font-size: 1.4rem;
+  }
+  
+  .roririro-questnew-desc {
+    font-size: 1rem;
+  }
+  
+  .roririro-questnew-additional-image {
+    max-width: 280px;
+    margin: -50px auto 20px auto;
+  }
+}
