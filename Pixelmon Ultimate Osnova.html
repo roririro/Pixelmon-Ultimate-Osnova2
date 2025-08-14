@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1650">
+    <title>Pixelmon Ultimate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/niz.css" rel="stylesheet">
+    <link href="./css/sps.css" rel="stylesheet">
+    <link href="./styles/landing.css" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="./styles/animation.css" rel="stylesheet">
+    <link href="./styles/media.css" rel="stylesheet">
+    <link href="./css/battle simulator.css" rel="stylesheet">
+    <link href="./css/catch them all.css" rel="stylesheet">
+    <link href="./css/custom skins.css" rel="stylesheet">
+    <link href="./css/general description.css" rel="stylesheet">
+    <link href="./css/legendary crystals.css" rel="stylesheet">
+    <link href="./css/other mods.css" rel="stylesheet">
+    <link href="./css/poke market.css" rel="stylesheet">
+    <link href="./css/poke trainer level.css" rel="stylesheet">
+    <link href="./css/quest lines.css" rel="stylesheet">
+    <link href="./css/server composition.css" rel="stylesheet">
+    <link href="./css/tower of infinity.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/warp/favicon.ico" type="image/x-icon">
+</head>
+<style>
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 70%, rgb(0, 0, 0) 100%),
+        url('./img/warp/fonk.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0px) brightness(100%);
+    transition: filter 0.5s ease;
+    z-index: -10; 
+}
+.overlay-img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    height: auto;
+    background-image: url("./img/warp/logo_px2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    animation: zoomIn 4s ease-out forwards;
+}
+.overlay-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; 
+    animation: cyberpunkGlow 12s infinite alternate;
+    mix-blend-mode: overlay;
+}
+.overlay-img {
+    width: 6vw; /* Фиксированная ширина */
+    height: 20vw; /* Фиксированная высота */
+}
+.overlay-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards; 
+    z-index: 1; 
+}
+</style>
+<body>
+    <div class="overlay-container">
+        <div class="background-img"></div>
+        <div class="overlay-img"></div>
+        <div class="bottom-tab"></div>  
+    </div>
+<div class="download-launcher-container">
+    <a href="https://example.com/download" class="download-launcher-btn">Скачать лаунчер</a>
+</div>
+<div class="scroll-to-top-container">
+    <a href="#top" class="scroll-to-top-btn"></a>
+</div>
+<nav class="main-navbar">
+    <a class="logo-link" href="https://mcskill.net/">
+        <img src="./img/warp/mcskill.webp"
+             class="logo-img glow-logo"
+             alt="Логотип McSkill"
+             decoding="async"
+             loading="lazy">
+    </a>
+    <div class="nav-container">
+        <div class="nav-center">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-item-link glow" href="https://mcskill.net/mcforum/">Магазин</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-item-link glow" href="https://mcskill.net/mcforum/">Форум</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item-link glow" href="https://u.mcskill.net/dissupport">Поддержка</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item-link glow" href="https://discord.gg/mcskill">Discord</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="overlay-content">
+    <a href="#" class="start-game-btn">Начать игру</a>
+</div>
+<div class="auroratech-section">
+    <img src="./img/zagol/general description.png" alt="Дополнительное изображение" class="additional-image">
+</div>
+<div class="roririro-startx1-stats-box">
+  <div class="roririro-startx1-section5">
+    <div class="roririro-startx1-content-wrapper5">
+      <div class="roririro-startx1-benefits5">
+        <h3> <span style="color:#c667a4;">Pixelmon Ultimate</span></h3>
+        <p>Это сервер не имеющий подвязки к определенной версии мода Pixelmon и Minecraft в целом.</p>
+        
+        <div class="roririro-startx1-benefit5">
+          <h2>Что у нас есть?</h2>
+          <p>
+            На сервере представлено невероятное количество уникального контента отсутствующего на других подобных серверах, даже на официальных. <br>
+            Наш сервер никогда не стоит на месте и обновляется постоянно, не только на вайпах, но и просто во время вашей игры!<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="roririro-startx1-header">
+    <div class="roririro-startx1-underline"></div>
+  </div>
+  <div class="roririro-startx1-stats-grid">
+    <div class="roririro-startx1-stat">
+      <span class="roririro-startx1-stat-name">ПЛОЩАДЬ ОСНОВНОГО МИРА</span>
+      <span class="roririro-startx1-stat-value roririro-startx1-neon-purple">20 000 x 20 000</span>
+    </div>
+    <div class="roririro-startx1-stat">
+      <span class="roririro-startx1-stat-name">ВЕРСИЯ ИГРЫ</span>
+      <span class="roririro-startx1-stat-value roririro-startx1-neon-green">CUSTOM</span>
+    </div>
+    <div class="roririro-startx1-stat">
+      <span class="roririro-startx1-stat-name">РЕЖИМ PVP</span>
+      <span class="roririro-startx1-stat-value roririro-startx1-neon-red roririro-startx1-blink">ВЫКЛЮЧЕН</span>
+    </div>
+  </div>
+</div>
+<div class="auroratech-section2"></div>
+<section class="roririro-card-a1-section">
+  <img src="./img/zagol/catch them all.png" alt="Поймай их всех" class="additional-image">
+  <div class="roririro-card-a1-container">
+    <div class="roririro-card-a1">
+      <div class="roririro-card-a1-bg-wrap">
+        <div class="roririro-card-a1-bg" style="background-image: url('./img/cart/Rectangle%203190.png');"></div>
+      </div>
+      <div class="roririro-card-a1-content-wrap">
+        <div class="roririro-card-a1-feature-block">
+          <div class="roririro-card-a1-img-box">
+            <img src="./img/cart/57%202.png" alt="Покемоны 9 поколения" class="roririro-card-a1-feature-img">
+            <div class="roririro-card-a1-img-border"></div>
+          </div>
+          <div class="roririro-card-a1-text-block">
+            <span class="roririro-card-a1-badge">ЭКСКЛЮЗИВ</span>
+            <h3 class="roririro-card-a1-title">Больше чем официальный мод!</h3>
+            <p class="roririro-card-a1-desc">На сервере представлено большее количество покемонов, чем в официальном моде! <strong>Только у нас вы сможете поймать всех представителей 9-го поколения</strong> с полностью готовыми моделями, способностями и атаками.</p>
+            <div class="roririro-card-a1-stats">
+              <div class="roririro-card-a1-stat-item">
+                <span class="roririro-card-a1-stat-number">✔</span>
+                <span class="roririro-card-a1-stat-text">Атаки</span>
+              </div>
+              <div class="roririro-card-a1-stat-item">
+                <span class="roririro-card-a1-stat-number">✔</span>
+                <span class="roririro-card-a1-stat-text">Модели</span>
+              </div>
+              <div class="roririro-card-a1-stat-item">
+                <span class="roririro-card-a1-stat-number">9-е</span>
+                <span class="roririro-card-a1-stat-text">Поколение</span>
+              </div>
+              <div class="roririro-card-a1-stat-item">
+                <span class="roririro-card-a1-stat-number">✔</span>
+                <span class="roririro-card-a1-stat-text">Способности</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="roririro-card-a1">
+      <div class="roririro-card-a1-bg-wrap">
+        <div class="roririro-card-a1-bg" style="background-image: url('./img/cart/Rectangle%203190.png');"></div>
+      </div>
+      <div class="roririro-card-a1-content-wrap">
+        <div class="roririro-card-a1-feature-block roririro-card-a1-reverse">
+          <div class="roririro-card-a1-img-box">
+            <img src="./img/cart/Terapagos_Form0%201.png" alt="Покемоны поколения X" class="roririro-card-a1-feature-img">
+            <div class="roririro-card-a1-img-border roririro-card-a1-border-purple"></div>
+          </div>
+          <div class="roririro-card-a1-text-block">
+            <span class="roririro-card-a1-badge roririro-card-a1-badge-purple">НОВИНКА</span>
+            <h3 class="roririro-card-a1-title">ПОКОЛЕНИЕ <span class="roririro-card-a1-accent">X</span></h3>
+            <p class="roririro-card-a1-desc">А так же у вас есть возможность столкнуться с покемонами <strong>ранее не существовавшими нигде во вселенной Pokemon!</strong> Это 5 уникальных покемонов из «Поколения X», отличающихся редкими способами добычи и наличием одновременно 3 типов!</p>
+            <ul class="roririro-card-a1-feature-list">
+              <li class="roririro-card-a1-list-item"><span class="roririro-card-a1-stat-number2">✔</span> Эксклюзивные способы добычи</li>
+              <li class="roririro-card-a1-list-item"><span class="roririro-card-a1-stat-number2">✔</span> Содержащие в себе одновременно <strong>3 различных типа стихий!</strong></li>
+              <li class="roririro-card-a1-list-item"><span class="roririro-card-a1-stat-number2">✔</span> Особые эволюционные линии</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="auroratech-section2"></div>
+
+
+<section class="roririro-questnew-section">
+  <div class="roririro-questnew-container">
+    <div class="roririro-questnew-tournament-card">
+      <img src="./img/zagol/auto tournaments.png" alt="Прочие моды" class="roririro-questnew-additional-image">
+      <div class="roririro-questnew-bg-wrap">
+        <div class="roririro-questnew-bg" style="background-image: url('./img/cart/Rectangle\ 31290.png');"></div>
+      </div>
+      <div class="roririro-questnew-content-wrap">
+        <div class="roririro-questnew-feature-block">
+          <div class="roririro-questnew-img-box">
+            <img src="./img/cart/TrainersBattle3 1.png" alt="Покемоны 9 поколения" class="roririro-questnew-feature-img">
+            <div class="roririro-questnew-img-border"></div>
+          </div>
+          <div class="roririro-questnew-text-block">
+            <span class="roririro-questnew-badge">ИННОВАЦИЯ</span>
+            <h3 class="roririro-questnew-title">Автоматические ежедневные турниры!</h3>
+            <p class="roririro-questnew-desc"> Наша новейшая механика позволяет проводить уникальные каждодневные турниры без вмешательства членов состава. Взаимодействие происходит путем записи на турнир в определенно указанное время с помощью команды.На сервере есть разнообразное количество форматов турниров начиная от стандартных OU, Uber, AG и заканчивая кастомными форматами со включением Покемонов из «Поколения X» и не только! (подробнее о форматах турниров здесь)</p>
+            <div class="roririro-questnew-stats">
+              <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">✔</span>
+                <span class="roririro-questnew-stat-text">Автоматические</span>
+              </div>
+              <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">✔</span>
+                <span class="roririro-questnew-stat-text">Разные форматы</span>
+              </div>
+              <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">✔</span>
+                <span class="roririro-questnew-stat-text">Ежедневные</span>
+              </div>
+                            <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">✔</span>
+                <span class="roririro-questnew-stat-text">По команде</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="roririro-questnew-quest-card">
+      <img src="./img/zagol/quest lines.png" alt="Прочие моды" class="roririro-questnew-additional-image">
+      <div class="roririro-questnew-bg-wrap">
+        <div class="roririro-questnew-bg" style="background-image: url('./img/cart/Rectangle\ 31960.png');"></div>
+      </div>
+      <div class="roririro-questnew-content-wrap">
+        <div class="roririro-questnew-feature-block">
+          <div class="roririro-questnew-img-box">
+            <img src="./img/cart/image 49.png" alt="Квесты и задания" class="roririro-questnew-feature-img">
+            <div class="roririro-questnew-img-border"></div>
+          </div>
+          <div class="roririro-questnew-text-block">
+            <span class="roririro-questnew-badge">ПРИКЛЮЧЕНИЕ</span>
+            <h3 class="roririro-questnew-title">Более 1000 квестов для всех уровней сложности</h3>
+            <p class="roririro-questnew-desc">На нашем сервере представлено более
+                <strong> 1000 квестов</strong> разделенных на различные квестовые линии! Данные квесты созданы не только для того чтобы помочь 
+                новичкам <br>и начинающим игрокам, но и нацелены предать сложности <br>в прохождении сборки для более опытных игроков. 
+                <br>5 уникальных линий квестов направленные не только на информирование и получение наград, но и дающие<br>сложный вызов, 
+                точно не дадут вам быстро <br>заскучать!
+</p>
+            <div class="roririro-questnew-stats">
+              <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">✔</span>
+                <span class="roririro-questnew-stat-text">Квесты</span>
+              </div>
+              <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">✔</span>
+                <span class="roririro-questnew-stat-text">Линии</span>
+              </div>
+              <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">1000+</span>
+                <span class="roririro-questnew-stat-text">Задач</span>
+              </div>
+              <div class="roririro-questnew-stat-item">
+                <span class="roririro-questnew-stat-number">✔</span>
+                <span class="roririro-questnew-stat-text">Сложность</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="auroratech-section2"></div>
+
+
+<section class="roririro-lvl-poke-section">
+        <img src="./img/zagol/poke trainer level.png" alt="Прочие моды" class="additional-image">
+  <div class="roririro-lvl-poke-container">
+    <div class="roririro-lvl-poke-card">
+      <div class="roririro-lvl-poke-bg-wrap">
+        <div class="roririro-lvl-poke-bg" style="background-image: url('./img/cart/Group\ 3633.png');"></div>
+      </div>
+      <div class="roririro-lvl-poke-content-wrap">
+        <div class="roririro-lvl-poke-feature-block">
+          <div class="roririro-lvl-poke-img-box">
+            <img src="./img/cart/1 2312314.png" alt="Покемоны" class="roririro-lvl-poke-feature-img">
+            <div class="roririro-lvl-poke-img-border"></div>
+          </div>
+          <div class="roririro-lvl-poke-text-block">
+            <span class="roririro-lvl-poke-badge">РАЗВИТИЕ</span>
+            <h3 class="roririro-lvl-poke-title">Уникальная система уровней с наградами и классами</h3>
+            <p class="roririro-lvl-poke-desc">Уникальная система уровня помогающая вам по ходу развития получать полезные награды для дальнейшей игры!
+                 80 разных уровней и деление на 3 класса позволят вам выбрать направление своей игры на сервере. 
+                 Добыча опыта происходит путем: поимки и победы над различными покемонами, копания блоков молотами из HammerTime, выполнением квестов и тд. </p>
+            <div class="roririro-lvl-poke-stats">
+              <div class="roririro-lvl-poke-stat-item">
+                <span class="roririro-lvl-poke-stat-number">✔</span>
+                <span class="roririro-lvl-poke-stat-text">Опыт</span>
+              </div>
+              <div class="roririro-lvl-poke-stat-item">
+                <span class="roririro-lvl-poke-stat-number">✔</span>
+                <span class="roririro-lvl-poke-stat-text">Награды</span>
+              </div>
+              <div class="roririro-lvl-poke-stat-item">
+                <span class="roririro-lvl-poke-stat-number">80+</span>
+                <span class="roririro-lvl-poke-stat-text">Уровней</span>
+              </div>
+              <div class="roririro-lvl-poke-stat-item">
+                <span class="roririro-lvl-poke-stat-number">✔</span>
+                <span class="roririro-lvl-poke-stat-text">Классы</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="auroratech-section2"></div>
+<section class="roririro-infinity-section">
+  <img src="./img/zagol/tower of infinity.png" alt="Башня бесконечности" class="roririro-infinity-header-image">
+  <div class="roririro-infinity-container">
+    <div class="roririro-infinity-card">
+      <div class="roririro-infinity-bg-wrap">
+        <div class="roririro-infinity-bg" style="background-image: url('./img/cart/Rectangle%203i9u190.png');"></div>
+      </div>
+      <div class="roririro-infinity-content-wrap">
+        <div class="roririro-infinity-feature-block">
+          <div class="roririro-infinity-text-block">
+            <span class="roririro-infinity-badge">Эпическая</span>
+            <h3 class="roririro-infinity-title">Бесконечные сражения и награды в башне</h3>
+            <p class="roririro-infinity-desc">
+              Башня бесконечности - это уникальная локация которая предназначена для "бесконечного" сражения против покемонов.
+              Сам процесс сражения запускается путем прописывания команды /it start. После прописывания команды вы будете 
+              телепортированы на один из 30 уникальных этажей и у вас начнется 1-я волна битвы с покемоном. После завершения 
+              каждой волны у вас будет 10 секунд на использование хилящих предметов или же просто для отдыха. Все последующие 
+              волны будут становится все сложнее, ваша же задача покорить как можно большее количество волн и за счет этого 
+              получить лучшие награды и место в топе исследователей "Башни бесконечности". Чтобы узнать список прочих команд 
+              и ознакомиться с информацией о башне, просто телепортируйтесь на /warp it.
+            </p>
+            <div class="roririro-infinity-stats">
+              <div class="roririro-infinity-stat-item">
+                <span class="roririro-infinity-stat-number">30+</span>
+                <span class="roririro-infinity-stat-text">Этажей</span>
+              </div>
+              <div class="roririro-infinity-stat-item">
+                <span class="roririro-infinity-stat-number">✔</span>
+                <span class="roririro-infinity-stat-text">Волны</span>
+              </div>
+              <div class="roririro-infinity-stat-item">
+                <span class="roririro-infinity-stat-number">✔</span>
+                <span class="roririro-infinity-stat-text">Боссы</span>
+              </div>
+              <div class="roririro-infinity-stat-item">
+                <span class="roririro-infinity-stat-number">✔</span>
+                <span class="roririro-infinity-stat-text">Команды</span>
+              </div>
+              <div class="roririro-infinity-stat-item">
+                <span class="roririro-infinity-stat-number">✔</span>
+                <span class="roririro-infinity-stat-text">Топ игроков</span>
+              </div>
+              <div class="roririro-infinity-stat-item">
+                <span class="roririro-infinity-stat-number">✔</span>
+                <span class="roririro-infinity-stat-text">Рейды и события</span>
+              </div>
+              <div class="roririro-infinity-stat-item">
+                <span class="roririro-infinity-stat-number">✔</span>
+                <span class="roririro-infinity-stat-text">Награды</span>
+              </div>
+            </div>
+          </div>
+          <div class="roririro-infinity-img-block">
+            <div class="roririro-infinity-img-box">
+              <img src="./img/cart/23 BattleTower 13 1.png" alt="Башня бесконечности" class="roririro-infinity-feature-img">
+              <div class="roririro-infinity-img-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="auroratech-section2">
+</div>
+<section class="roririro-crt2x-section">
+  <div class="roririro-crt2x-container">
+    <div class="roririro-crt2x-tournament-card">
+      <img src="./img/zagol/custom skins.png" alt="Прочие моды" class="roririro-crt2x-additional-image">
+      <div class="roririro-crt2x-bg-wrap">
+        <div class="roririro-crt2x-bg" style="background-image: url('./img/cart/Rectangle\ 3191.png');"></div>
+      </div>
+      <div class="roririro-crt2x-content-wrap">
+        <div class="roririro-crt2x-feature-block">
+          <div class="roririro-crt2x-img-box">
+            <img src="./img/cart/Melmetal_Form0_Gold 2.png" alt="Покемоны 9 поколения" class="roririro-crt2x-feature-img">
+            <div class="roririro-crt2x-img-border"></div>
+          </div>
+          <div class="roririro-crt2x-text-block">
+            <span class="roririro-crt2x-badge">NEW</span>
+            <h3 class="roririro-crt2x-title">Уникальные скины на покемонов, разнообразные темы и способы получения.</h3>
+            <p class="roririro-crt2x-desc"> На сервере представлено большое количество новых «скинов» на покемонов. Они различаются по тематикам, а так же некоторые из покемонов имеют полностью индивидуальные «скины» с необычными способами получения.</p>
+            <div class="roririro-crt2x-stats">
+              <div class="roririro-crt2x-stat-item">
+                <span class="roririro-crt2x-stat-number">✔</span>
+                <span class="roririro-crt2x-stat-text">Разнообразие</span>
+              </div>
+              <div class="roririro-crt2x-stat-item">
+                <span class="roririro-crt2x-stat-number">✔</span>
+                <span class="roririro-crt2x-stat-text">Тематики</span>
+              </div>
+              <div class="roririro-crt2x-stat-item">
+                <span class="roririro-crt2x-stat-number">✔</span>
+                <span class="roririro-crt2x-stat-text">Обновления контента</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="roririro-crt2x-quest-card">
+      <img src="./img/zagol/magic stones.png" alt="Прочие моды" class="roririro-crt2x-additional-image">
+      <div class="roririro-crt2x-bg-wrap">
+        <div class="roririro-crt2x-bg" style="background-image: url('./img/cart/Rectanglkke\ 3190.png');"></div>
+      </div>
+      <div class="roririro-crt2x-content-wrap">
+        <div class="roririro-crt2x-feature-block">
+          <div class="roririro-crt2x-img-box">
+            <img src="./img/cart/Group 3678.png" alt="Квесты и задания" class="roririro-crt2x-feature-img">
+            <div class="roririro-crt2x-img-border"></div>
+          </div>
+          <div class="roririro-crt2x-text-block">
+            <span class="roririro-crt2x-badge">NEW</span>
+            <h3 class="roririro-crt2x-title">Полезные предметы для покемонов, получаемые в квестах и рейдах.</h3>
+            <p class="roririro-crt2x-desc">Магические камни это уникальные предметы имеющие много полезных применений для ваших покемонов и не только. Примерами данных камней являются: Камень Клонирования, Камень Шайни, Камень Счастья, Камень пропуска задания и тд. Все камни на сервере по мимо покупки можно так же получить выполняя квесты, забирая ежедневные награды, побеждая в рейдах и т.п.</p>
+            <div class="roririro-crt2x-stats">
+              <div class="roririro-crt2x-stat-item">
+                <span class="roririro-crt2x-stat-number">✔</span>
+                <span class="roririro-crt2x-stat-text">Полезные свойства</span>
+              </div>
+              <div class="roririro-crt2x-stat-item">
+                <span class="roririro-crt2x-stat-number">✔</span>
+                <span class="roririro-crt2x-stat-text">Применения</span>
+              </div>
+              <div class="roririro-crt2x-stat-item">
+                <span class="roririro-crt2x-stat-number">✔</span>
+                <span class="roririro-crt2x-stat-text">Получение</span>
+              </div>
+              <div class="roririro-crt2x-stat-item">
+                <span class="roririro-crt2x-stat-number">✔</span>
+                <span class="roririro-crt2x-stat-text">Награды</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="auroratech-section2"></div>
+<section class="roririro-cartis2x-section">
+  <img src="./img/zagol/battle simulator.png" alt="Башня бесконечности" class="roririro-cartis2x-header-image">
+  <div class="roririro-cartis2x-container">
+    <div class="roririro-cartis2x-card">
+      <div class="roririro-cartis2x-bg-wrap">
+        <div class="roririro-cartis2x-bg" style="background-image: url('./img/cart/Rectangle\ 3166690.png');"></div>
+      </div>
+      <div class="roririro-cartis2x-content-wrap">
+        <div class="roririro-cartis2x-feature-block">
+          <div class="roririro-cartis2x-text-block">
+            <span class="roririro-cartis2x-badge">ЭКСКЛЮЗИВ</span>
+            <h3 class="roririro-cartis2x-title">Автоматизированный бой между покемонами и добыча ресурсов</h3>
+            <p class="roririro-cartis2x-desc">
+             Новый механизм существующий только на нашем сервере. 
+             Его основной задачей является симуляция боя между 2 
+             покемонами находящимися в нем. Подключив сундук к данному механизму,
+              а также запитав его электрическим покемоном, вы сможете получать не 
+              только ресурсы с покемона которого вы выставили целью, но и так же будете
+               получать опыт для покемона который будет атакующим. Симулятор боя также 
+               используется для автоматизации добычи осколков легендарных кристаллов 
+               из непосредственно легендарных покемонов. Подробнее о симуляторе можно
+                узнать в гайде.
+            </p>
+            <div class="roririro-cartis2x-stats">
+              <div class="roririro-cartis2x-stat-item">
+                <span class="roririro-cartis2x-stat-number">✔</span>
+                <span class="roririro-cartis2x-stat-text">Инновации</span>
+              </div>
+              <div class="roririro-cartis2x-stat-item">
+                <span class="roririro-cartis2x-stat-number">✔</span>
+                <span class="roririro-cartis2x-stat-text">Опыт</span>
+              </div>
+              <div class="roririro-cartis2x-stat-item">
+                <span class="roririro-cartis2x-stat-number">✔</span>
+                <span class="roririro-cartis2x-stat-text">Ресурсы</span>
+              </div>
+              <div class="roririro-cartis2x-stat-item">
+                <span class="roririro-cartis2x-stat-number">✔</span>
+                <span class="roririro-cartis2x-stat-text">Бои</span>
+              </div>
+              <div class="roririro-cartis2x-stat-item">
+                <span class="roririro-cartis2x-stat-number">✔</span>
+                <span class="roririro-cartis2x-stat-text">Механизм</span>
+              </div>
+              <div class="roririro-cartis2x-stat-item">
+                <span class="roririro-cartis2x-stat-number">✔</span>
+                <span class="roririro-cartis2x-stat-text">Автоматизация</span>
+              </div>
+            </div>
+          </div>
+          <div class="roririro-cartis2x-img-block">
+            <div class="roririro-cartis2x-img-box">
+              <img src="./img/cart/SimulatorBattle1 1.png" alt="Башня бесконечности" class="roririro-cartis2x-feature-img">
+              <div class="roririro-cartis2x-img-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="auroratech-section2">
+</div>
+<section class="roririro-cartds2xx-section">
+  <div class="roririro-cartds2xx-container">
+    <div class="roririro-cartds2xx-tournament-card">
+      <img src="./img/zagol/protection of legendary pokemon.png" alt="Прочие моды" class="roririro-cartds2xx-additional-image">
+      <div class="roririro-cartds2xx-bg-wrap">
+        <div class="roririro-cartds2xx-bg" style="background-image: url('./img/cart/Rectangle\ 3144490.png');"></div>
+      </div>
+      <div class="roririro-cartds2xx-content-wrap">
+        <div class="roririro-cartds2xx-feature-block">
+          <div class="roririro-cartds2xx-img-box">
+            <img src="./img/cart/LegendaryDefense2 1.png" alt="Покемоны 9 поколения" class="roririro-cartds2xx-feature-img">
+            <div class="roririro-cartds2xx-img-border"></div>
+          </div>
+          <div class="roririro-cartds2xx-text-block">
+            <span class="roririro-cartds2xx-badge">эксклюзив</span>
+            <h3 class="roririro-cartds2xx-title">Безопасность легендарных покемонов в игре</h3>
+            <p class="roririro-cartds2xx-desc">На нашем сервере реализована система защиты легендарных покемонов. Она автоматически срабатывает после того как легендарный покемон заспавнился лично вам и на протяжении 3 минут защищает данного покемона от любого воздействия других игроков, а так же от смерти в блоках и т.п. Так же если вы имеете донатную привилегию от Deluxe и выше, то вам станет доступна команда для моментальной телепортации на вашу легенду.</p>
+            <div class="roririro-cartds2xx-stats">
+              <div class="roririro-cartds2xx-stat-item">
+                <span class="roririro-cartds2xx-stat-number">3 мин</span>
+                <span class="roririro-cartds2xx-stat-text">Защита</span>
+              </div>
+              <div class="roririro-cartds2xx-stat-item">
+                <span class="roririro-cartds2xx-stat-number">✔</span>
+                <span class="roririro-cartds2xx-stat-text">Безопасность</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="roririro-cartds2xx-quest-card">
+      <img src="./img/zagol/poke market.png" alt="Прочие моды" class="roririro-cartds2xx-additional-image">
+      <div class="roririro-cartds2xx-bg-wrap">
+        <div class="roririro-cartds2xx-bg" style="background-image: url('./img/cart/Rectangle\ 3193330.png');"></div>
+      </div>
+      <div class="roririro-cartds2xx-content-wrap">
+        <div class="roririro-cartds2xx-feature-block">
+          <div class="roririro-cartds2xx-img-box">
+            <img src="./img/cart/MarketSell 2.png" alt="Квесты и задания" class="roririro-cartds2xx-feature-img">
+            <div class="roririro-cartds2xx-img-border"></div>
+          </div>
+          <div class="roririro-cartds2xx-text-block">
+            <span class="roririro-cartds2xx-badge">Market</span>
+            <h3 class="roririro-cartds2xx-title">Обмен и продажа покемонов между игроками</h3>
+            <p class="roririro-cartds2xx-desc">Наша система рынка позволяет вам без особых сложностей выставить вашего покемона на продажу за эмы, или же подыскать себе идеальный вариант для покупки среди предложений других игроков сервера. Для того чтобы воспользоваться рынком вам потребуется прописать команду /pb после чего вы сможете посмотреть весь список продаваемых покемонов, а так же прописав команду /ps сможете выставить на продажу своего покемона, установив ему цену и оставив комментарий.</p>
+            <div class="roririro-cartds2xx-stats">
+              <div class="roririro-cartds2xx-stat-item">
+                <span class="roririro-cartds2xx-stat-number">✔</span>
+                <span class="roririro-cartds2xx-stat-text">Обмен</span>
+              </div>
+              <div class="roririro-cartds2xx-stat-item">
+                <span class="roririro-cartds2xx-stat-number">✔</span>
+                <span class="roririro-cartds2xx-stat-text">Продажа</span>
+              </div>
+              <div class="roririro-cartds2xx-stat-item">
+                <span class="roririro-cartds2xx-stat-number">/pb</span>
+                <span class="roririro-cartds2xx-stat-text">Команды</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="auroratech-section2"></div>
+<section class="roririro-crystals-2xs-section">
+  <img src="./img/zagol/legendary crystals.png" alt="Башня бесконечности" class="roririro-crystals-2xs-header-image">
+  <div class="roririro-crystals-2xs-container">
+    <div class="roririro-crystals-2xs-card">
+      <div class="roririro-crystals-2xs-bg-wrap">
+        <div class="roririro-crystals-2xs-bg" style="background-image: url('./img/cart/Rectangle\ 30.png');"></div>
+      </div>
+      <div class="roririro-crystals-2xs-content-wrap">
+        <div class="roririro-crystals-2xs-feature-block">
+          <div class="roririro-crystals-2xs-text-block">
+            <span class="roririro-crystals-2xs-badge">ЭКСКЛЮЗИВ</span>
+            <h3 class="roririro-crystals-2xs-title">Собирайте осколки и создавайте кристаллы</h3>
+            <p class="roririro-crystals-2xs-desc">Легендарные Кристаллы это один из самых ценных ресурсов на нашей сборке. Легендарные Кристаллы, а точнее их осколки, добываются путем победы над легендарными покемонами, с небольшим шансом. Далее из осколков можно создать полноценные кристаллы, а в последствии и блоки. Сами кристаллы и блоки используются для создания финальной брони и молота, а так же для некоторых полезных крафтов.</p>
+            <div class="roririro-crystals-2xs-stats">
+              <div class="roririro-crystals-2xs-stat-item">
+                <span class="roririro-crystals-2xs-stat-number">✔</span>
+                <span class="roririro-crystals-2xs-stat-text">Осколки</span>
+              </div>
+              <div class="roririro-crystals-2xs-stat-item">
+                <span class="roririro-crystals-2xs-stat-number">✔</span>
+                <span class="roririro-crystals-2xs-stat-text">Кристаллы</span>
+              </div>
+              <div class="roririro-crystals-2xs-stat-item">
+                <span class="roririro-crystals-2xs-stat-number">✔</span>
+                <span class="roririro-crystals-2xs-stat-text">Крафты</span>
+              </div>
+              <div class="roririro-crystals-2xs-stat-item">
+                <span class="roririro-crystals-2xs-stat-number">✔</span>
+                <span class="roririro-crystals-2xs-stat-text">Молот</span>
+              </div>
+              <div class="roririro-crystals-2xs-stat-item">
+                <span class="roririro-crystals-2xs-stat-number">✔</span>
+                <span class="roririro-crystals-2xs-stat-text">Броня</span>
+              </div>
+            </div>
+          </div>
+          <div class="roririro-crystals-2xs-img-block">
+            <div class="roririro-crystals-2xs-img-box">
+              <img src="./img/cart/Group 37.png" alt="Башня бесконечности" class="roririro-crystals-2xs-feature-img">
+              <div class="roririro-crystals-2xs-img-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="auroratech-section2"></div>
+<div class="auroratech-section3">
+    <img src="./img/zagol/other mods.png" alt="Прочие моды" class="additional-image3">
+    <div class="mods-container">
+        <div class="mods-grid">
+            <div class="mod-item">
+                <div class="mod-icon">
+                    <img src="https://media.forgecdn.net/avatars/thumbnails/454/327/256/256/637721444888827188.png" alt="WonderTrade">
+                </div>
+                <h3 class="mod-name">WonderTrade</h3>
+                <div class="mod-description">
+                    <p>Добавляет возможность обменивать покемонов на случайных</p>
+                </div>
+            </div>
+                    <div class="mod-item">
+                        <div class="mod-icon">
+                            <img src="https://cdn.modrinth.com/data/rlloIFEV/271b2133a315ee3d864ea5a429472f0e71591fe3_96.webp" alt="Travelers Backpack">
+                        </div>
+                        <h3 class="mod-name">Travelers Backpack</h3>
+                        <div class="mod-description">
+                            <p>Добавляет рюкзаки для ношения в инвентаре</p>
+                        </div>
+                    </div>
+                            <div class="mod-item">
+                                <div class="mod-icon">
+                                    <img src="https://minecraft-inside.ru/uploads/files/2015-11/5dede892269a4f334dbc2e4c15186ba8.png" alt="Hammer Time">
+                                </div>
+                                <h3 class="mod-name">Hammer Time</h3>
+                                <div class="mod-description">
+                                    <p>Добавляет инструменты для различной добычи</p>
+                                </div>
+                            </div>
+                                    <div class="mod-item">
+                                        <div class="mod-icon">
+                                            <img src="https://tlmods.org/files/pictures/logo/787814.png" alt="Natures Compass">
+                                        </div>
+                                        <h3 class="mod-name">Natures Compass</h3>
+                                        <div class="mod-description">
+                                            <p>Добавляет компас для поиска биомов</p>
+                                        </div>
+                                    </div>
+                                        <div class="mod-item">
+                                            <div class="mod-icon">
+                                                <img src="https://cdn.modrinth.com/data/RrkwO55O/4443f0fad66cec50229877c0f6863a1ba997aca5.png" alt="Infinity Storage">
+                                            </div>
+                                            <h3 class="mod-name">Infinity Storage</h3>
+                                            <div class="mod-description">
+                                                <p>Добавляет сундук с безграничным объемом слотов</p>
+                                            </div>
+                                        </div>
+                                                <div class="mod-item">
+                                                    <div class="mod-icon">
+                                                        <img src="https://cdn.modrinth.com/data/7mHyGgvW/7a067a64ead60b11551b74cae3019a61bb35c7af_96.webp" alt="Iron Chest">
+                                                    </div>
+                                                    <h3 class="mod-name">Iron Chest</h3>
+                                                    <div class="mod-description">
+                                                        <p>Добавляет различные виды сундуков</p>
+                                                    </div>
+                                                </div>
+                                                        <div class="mod-item">
+                                                            <div class="mod-icon">
+                                                                <img src="https://cdn.modrinth.com/data/guitPqEi/58b4229c52876eff66c9f98a5d2a1e9b9f648501.png" alt="Storage Drawers">
+                                                            </div>
+                                                            <h3 class="mod-name">Storage Drawers</h3>
+                                                            <div class="mod-description">
+                                                                <p>Добавляет настенные хранилища</p>
+                                                            </div>
+                                                        </div>
+                                                                <div class="mod-item">
+                                                                    <div class="mod-icon">
+                                                                        <img src="https://cdn.modrinth.com/data/vFAmwl6B/57db287e8e066e59ebcd2b444cb11472b4b0e982_96.webp" alt="Custom NPCs">
+                                                                    </div>
+                                                                    <h3 class="mod-name">Custom NPCs</h3>
+                                                                    <div class="mod-description">
+                                                                        <p>Добавляет различных NPCs</p>
+                                                                    </div>
+                                                                </div>
+                                                                        <div class="mod-item">
+                                                                            <div class="mod-icon">
+                                                                                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAFAAIEBgEDBwj/xAA6EAABAwMCAwQHBgUFAAAAAAABAgMRAAQhBRITMUEGFVFhFCJSU3GBkQcyobHR8CMzZMHxJERjouH/xAAZAQADAQEBAAAAAAAAAAAAAAACAwQBAAX/xAAiEQACAgEDBAMAAAAAAAAAAAAAAQIDERQhMQQSE1EiQWH/2gAMAwEAAhEDEQA/AOuPXty0kqLQUkdUmai99q92ajNuuMHY6DHT99a13SGz/EbUPNI/tV0aIcMglfPGUyb34r3ZrYvVlJbQsAK3dB0oLtrNM0tYC6mwK99r92aXfavdmmNv2rrZDrKQrGTihq0+sY5TihjRW9mgpX2JbMK9+K92aXfivdmhMUoo9LUDqbAt34r3Zpd+K92aE7aW2u01R2psC3fivdml34r3ZoTtpba7TVHamwJqdbWCh1O0+BqK4wtB5SPEVxzWftR1FbyRYNNsbJCgYWFfhR7sj9qjdy76PriEsKVGxbKFQTyzk0mPUVp4TMdcmss6Fw1RMY8awEZiiDVwl1sEAFKwCD4imqZBykGnKz2B2kYNLZcSpSZAz5GpNy006wl1kISQCVJmlsVtIJJB86F6zrtn2eaQrUEPlu4JQCykEgjOZIoJzx8s8DK4OT7fZu20tlbLB5nULRq7ttxZdTuRuEGPOpHANN8iFuLTwyIhvcsDxNFG2kNJhIA8ajcLbnMihms9o9O0hSG9Tv0MKWJSlQJJHyFLnLP3salgJPoQ6YaSnHNQxTU2qIy6mfKo+l6hZahZ+l2znEZJMKKSkY+NV3VftC0Gwu1W4WH9oypgJUkHwmedY7FFc7HYPPj4UlZBimNrWhwKSBI86s+taO27qdwqzIQytxSk8QxgmYiMRy+VQWNLS3c8F4FRiZRn5cq8VWRwXrBK07tj2gtG22bfUboIbI2oSsnHn410yx+1N27sbZNvpqjdQA+46oBvz2wZJPhXPdL00WmqM3je8IQcoWkZEH/ynvaTeMofe09x30VtKlLTyCE/H98qJdQ+IsyHjclk6UPtA1CT/prUg8sK/Wg3ajXXu0VsyzcMttBpZWC2TkxEZoHoyg/YsqMKUZBk5OSKlpUyoqSgpUU8wOnT9aS7rXs2ehGNSeVEI9n+0eqaNw2hcG4tUCAw6kQB4BUSKM2/by9TeOuusIct1gBthONh6ndGapir1gO8JLThVO0fw8T8TU21Qm5/lpkkAhMZrl1FiXJkq6Xu4kztj2v1rUUsnSXHLJtvK0Nq9ZZ+OMeVc21vWL/U7lT2pXLz7v3ZXiPKByHlVv1TR7rUGeJasOLSnBW25G3nMiCarN1o10lRaLJKyrJ9nyP+KNWylvJkdka1L4rAxHa7WWdPTpzF6tm1SCOG36szzk88z40L4wOSTJ86mjSL3cAGVJRJTxFJO2QJifnTHdIvEKjhqV5pE0Tsi+WJaRdLGyuHiv0ZLjq0JK1FIMgcj+da0p5REVK05Djz/BafDKnUlBUSQD5GOlXPSdKtNIaWXX0O3PVRAER4Cfh9TzqWuqdsmwVDuSwAbHQQ2j0jU1cJrBCAfWUI/DpUXVtSDzfotshLdsnGxIwr9asmrM216ZXdrQkEg7BMwRPPyND12WmttBJtlqA5qcOwnoZPxT+JHnVEqnFdsAnBraJTntQSw1gesk4pp1h5XDSlkhDiypMJjco4x4/dj5VaH+7EN8L0e0KAZCFkuT4nHU7U/smtTepM2y5aSDAAAS0EjE9SZ6k/5NB44rllELlGOGV28s764u1KbadbbBlLa3DCQRPX61rfa1RswlC0pSjbhf3uXTrVgbu/SLhzeQNxlG4jH7FbnWkuoII6SoBPLPWfMT8q5Vxa2N1GX+Emw029acccc1JlJ3AI4STERGRAjlRhd3ZJSE36m7naccRsY+tVN1N4olILy0JBVKZIgECfLmPqKhubgopV94c8zXeaMNkieU28ywENZOnl1HdzWwZ3esT+dDIFZnzrE4xU0n3PIhvO49Cy0sKTiM0Sd1l9yPVTugZImSBB548PpQyQZAPwgVj7uBI6ZHSihZKCwjVNx4JTmoXSwUl1QEZAMTiPyrQta1KJUpRkyZpvTM4MYHM00QCT5iCax2SfLMcmzJIMfWsnBz41gqTPMAdOlalvtpJAMkHkM0BhNlptW+3dU4UALBSkA/Q5MEH5Z60T/iNohTIQ5CgW1JBiOp59T+RqtXOoretLe3IG1pxa0q5KhXT4YrfpGoJtApDhO0HcHFZ8PnBzy8qpoeHgtk6sJQLA8xxQErKyg5JyN5BPKJ5R40C1dbzK2thTsU2PWSkwtUyTB5TjkY69aZda8SS1aocc2kwVzKvlnrH0FR1t312pa7lSQnJCAQM4OADHKm2VprIPdJRaIrjrjiSCowaY2XAmApSYp884E1kJV0E/CpifgP8Ad9/CiLK6kDH8BX6Ujpt91srvlP8AJVz+lehOA37IpcBv2ao0i9jtOvZ55VpuoRHoF2Qf6ZX6VCumdYCylrSb8kHKvRHOnyr0nwG/ZFLgN+zWrpY+zvAvZ5mNhrC9pVpuozzj0VwR/wBawNI1WQe7b7cf6Vefwr01wG/ZpcBv2aLTL2b4f08yp0fVQMaXfA4/2q/0pzeiXzjqEP6bfhoqAUpNqufjyr0xwG/ZpcBv2a1UJPOTVVj7OA2+hXloVup09xpKVqBUGDgEAZ5YnrmK33Wia4OOLXTZK8puCYiRkx5iedd1ctWXG1oWgFKgQoeIqENA0xOBbkR/yr/WnKIxQSOGjstrDh4tzbbnFEqXBATPX+9SWuzupQR6HEGIxiu1K0HTVAhVuSDzBdXn8awns/paZ220SZMOLyfrSX08Gxbpiz//2Q==" alt="Carpenters Blocks">
+                                                                            </div>
+                                                                            <h3 class="mod-name">Carpenters Blocks</h3>
+                                                                            <div class="mod-description">
+                                                                                <p>Добавляет блоки различной формы</p>
+                                                                            </div>
+                                                                        </div>
+                                                                                <div class="mod-item">
+                                                                                    <div class="mod-icon">
+                                                                                        <img src="https://cdn.modrinth.com/data/dtWC90iB/d586f7c2b49581f2f148cab98424e22f35cb87df_96.webp" alt="Carpenters Blocks">
+                                                                                    </div>
+                                                                                    <h3 class="mod-name">Macaw</h3>
+                                                                                    <div class="mod-description">
+                                                                                        <p>Добавляет мебель, мосты, заборы и стены</p>
+                                                                                    </div>
+                                                                                </div>
+        </div>
+    </div>
+</div>
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+<div class="team-section">
+    <img src=./img/zagol/server composition.png" alt="Наша команда" class="section-header-image">
+    <div class="team-container">
+        <div class="particles" id="particles"></div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="https://skins.mcskill.net/?name=4epB9Ik&mode=5&fx=43&fy=43" alt="4epB9Ik">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">4epB9Ik</h3>
+                    <p class="member-role">Технический Администратор</p>
+                </div>
+            </div>
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="https://skins.mcskill.net/?name=IamBANANA&mode=5&fx=43&fy=43" alt="IamBANANA">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">IamBANANA</h3>
+                            <p class="member-role">Куратор</p>
+                        </div>
+                    </div>
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <img src="https://skins.mcskill.net/?name=Just_Bruno&mode=5&fx=43&fy=43" alt="Just_Bruno">
+                                </div>
+                                <div class="member-info">
+                                    <h3 class="member-name">Just_Bruno</h3>
+                                    <p class="member-role">Гейм Дизайнер</p>
+                                </div>
+                            </div>
+                                    <div class="team-member">
+                                        <div class="member-avatar">
+                                            <img src="https://skins.mcskill.net/?name=Hansell&mode=5&fx=43&fy=43" alt="Hansell">
+                                        </div>
+                                        <div class="member-info">
+                                            <h3 class="member-name">Hansell</h3>
+                                            <p class="member-role">Гейм Дизайнер</p>
+                                        </div>
+                                    </div>
+                                            <div class="team-member">
+                                                <div class="member-avatar">
+                                                    <img src="https://skins.mcskill.net/?name=Peeek&mode=5&fx=43&fy=43" alt="Peeek">
+                                                </div>
+                                                <div class="member-info">
+                                                    <h3 class="member-name">Peeek</h3>
+                                                    <p class="member-role">Главный модератор</p>
+                                                </div>
+                                            </div>
+                                                    <div class="team-member">
+                                                        <div class="member-avatar">
+                                                            <img src="https://skins.mcskill.net/?name=ashrateppey&mode=5&fx=43&fy=43" alt="ashrateppey">
+                                                        </div>
+                                                        <div class="member-info">
+                                                            <h3 class="member-name">ashrateppey</h3>
+                                                            <p class="member-role">Старший модератор</p>
+                                                        </div>
+                                                    </div>
+                                                            <div class="team-member">
+                                                                <div class="member-avatar">
+                                                                    <img src="https://skins.mcskill.net/?name=urmala&mode=5&fx=43&fy=43" alt="urmala">
+                                                                </div>
+                                                                <div class="member-info">
+                                                                    <h3 class="member-name">urmala</h3>
+                                                                    <p class="member-role">Старший модератор</p>
+                                                                </div>
+                                                            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="https://skins.mcskill.net/?name=Arnold234&mode=5&fx=43&fy=43" alt="Arnold234">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Arnold234</h3>
+                    <p class="member-role">Старший модератор</p>
+                </div>
+            </div>
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="https://skins.mcskill.net/?name=teenfaust&mode=5&fx=43&fy=43" alt="teenfaust">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">teenfaust</h3>
+                            <p class="member-role">Старший модератор</p>
+                        </div>
+                    </div>
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <img src="https://skins.mcskill.net/?name=Espresso9047&mode=5&fx=43&fy=43" alt="Espresso9047">
+                                </div>
+                                <div class="member-info">
+                                    <h3 class="member-name">Espresso9047</h3>
+                                    <p class="member-role">Модератор</p>
+                                </div>
+                            </div>
+                                    <div class="team-member">
+                                        <div class="member-avatar">
+                                            <img src="https://skins.mcskill.net/?name=Zlain777VvvV&mode=5&fx=43&fy=43" alt="Zlain777VvvV">
+                                        </div>
+                                        <div class="member-info">
+                                            <h3 class="member-name">Zlain777VvvV</h3>
+                                            <p class="member-role">Модератор</p>
+                                        </div>
+                                    </div>
+                                            <div class="team-member">
+                                                <div class="member-avatar">
+                                                    <img src="https://skins.mcskill.net/?name=Wh1teFox&mode=5&fx=43&fy=43" alt="Wh1teFox">
+                                                </div>
+                                                <div class="member-info">
+                                                    <h3 class="member-name">Wh1teFox</h3>
+                                                    <p class="member-role">Помощник</p>
+                                                </div>
+                                            </div>
+                                                    <div class="team-member">
+                                                        <div class="member-avatar">
+                                                            <img src="https://skins.mcskill.net/?name=Gvardeetc&mode=5&fx=43&fy=43" alt="Gvardeetc">
+                                                        </div>
+                                                        <div class="member-info">
+                                                            <h3 class="member-name">Gvardeetc</h3>
+                                                            <p class="member-role">Помощник</p>
+                                                        </div>
+                                                    </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="https://skins.mcskill.net/?name=4oJloBik&mode=5&fx=43&fy=43" alt="4oJloBik">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">4oJloBik</h3>
+                    <p class="member-role">Помощник</p>
+                </div>
+            </div>
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="https://skins.mcskill.net/?name=Mabsd&mode=5&fx=43&fy=43" alt="Mabsd">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Mabsd</h3>
+                            <p class="member-role">Строитель</p>
+                        </div>
+                    </div>
+                            <div class="team-member">
+                                <div class="member-avatar">
+                                    <img src="https://skins.mcskill.net/?name=Gyfirda&mode=5&fx=43&fy=43" alt="Gyfirda">
+                                </div>
+                                <div class="member-info">
+                                    <h3 class="member-name">Gyfirda</h3>
+                                    <p class="member-role">Строитель</p>
+                                </div>
+                            </div>
+                                    <div class="team-member">
+                                        <div class="member-avatar">
+                                            <img src="https://skins.mcskill.net/?name=zninja_&mode=5&fx=43&fy=43" alt="zninja_">
+                                        </div>
+                                        <div class="member-info">
+                                            <h3 class="member-name">zninja_</h3>
+                                            <p class="member-role">Строитель</p>
+                                        </div>
+                                    </div>
+                                            <div class="team-member">
+                                                <div class="member-avatar">
+                                                    <img src="https://skins.mcskill.net/?name=s1o&mode=5&fx=43&fy=43" alt="s1o">
+                                                </div>
+                                                <div class="member-info">
+                                                    <h3 class="member-name">s1o</h3>
+                                                    <p class="member-role">Строитель</p>
+                                                </div>
+                                            </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="roririro-auroratech-section2">
+    </div>
+        <section class="roririro-auroratech-section">
+            <img src="./img/warp/log2.png" alt="Человечек" class="roririro-auroratech-character4">
+            <div class="roririro-auroratech-cloud-container">
+                <img src="./img/warp/log.png" alt="Облако с текстом" class="roririro-auroratech-cloud-image">
+                <div class="roririro-auroratech-cloud-text"></div>
+            </div>
+            <div class="roririro-auroratech-oval-container">
+                <img src="./img/niz/oval.png" alt="Белый овал" class="roririro-auroratech-oval-image">
+                <div class="roririro-auroratech-oval-text">
+                    <p>Сделано c любовью и уважением к нашим дорогим  игрокам. Cпасибо вам!</p>
+                </div>
+                <div class="roririro-auroratech-ray roririro-auroratech-ray1"></div>
+                <div class="roririro-auroratech-ray roririro-auroratech-ray2"></div>
+                <div class="roririro-auroratech-ray roririro-auroratech-ray3"></div>
+                <div class="roririro-auroratech-ray roririro-auroratech-ray4"></div>
+                <div class="roririro-auroratech-ray roririro-auroratech-ray6"></div>
+            </div>
+        </section>
+<div class="perfect-heart"></div>
+        <section class="roririro-AT-main-section">
+            <h2 class="roririro-AT-main-title">А так-же будет интересно!</h2>
+            <div class="roririro-AT-cards-wrapper">
+                <a href="/Pixelmon Ultimate Gen X/Pixelmon Ultimate Gen X.html" class="roririro-AT-card">
+                    <div class="roririro-AT-card-header">
+                        <h3 class="roririro-AT-card-title">Последнее обновление</h3>
+                    </div>
+                    <div class="roririro-AT-card-image">
+                        <img src="./img/warp/leto.jpg" alt="Описание сервера">
+                    </div>
+                    <div class="roririro-AT-card-body">
+                        <p class="roririro-AT-card-text">Мы потрудились, чтобы этим летом удивить вас новыми возможностями. Ознакомьтесь с изменениями!!</p>
+                    </div>
+                </a>
+                <a href="/Pixelmon Ultimate Old/Pixelmon Ultimate Old.html" class="roririro-AT-card">
+                    <div class="roririro-AT-card-header">
+                        <h3 class="roririro-AT-card-title">Весеннее обновление</h3>
+                    </div>
+                    <div class="roririro-AT-card-image">
+                        <img src="./img/warp/vesna.jpg" alt="Весеннее обновление">
+                    </div>
+                    <div class="roririro-AT-card-body">
+                        <p class="roririro-AT-card-text">Свежие изменения, новые функции и улучшения, которые мы подготовили для вас этой весной. Откройте для себя обновлённый мир!</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+<div class="roririro-auroratech-section3">
+    <div class="roririro-auroratech-oval-text2">
+        <p>Protected by copyright © 2025 Pixelmon Ultimate.</p>
+    </div>
+</div>
+        <footer class="roririro-footer">
+            <div class="roririro-footer-inner">
+                <div class="roririro-footer-container">
+                    <div class="roririro-footer-logo">
+                        <img src="./img/warp/mcskill.webp" alt="Логотип" />
+                    </div>
+                    <div class="roririro-footer-left-section">
+                        <div class="roririro-footer-top-buttons">
+                            <a href="https://discord.gg/mcskill" class="roririro-footer-button roririro-footer-button1"></a>
+                            <a href="https://vk.com/mcskill" class="roririro-footer-button roririro-footer-button2"></a>
+                            <a href="https://t.me/mcskill" class="roririro-footer-button roririro-footer-button3"></a>
+                        </div>
+                    </div>
+                    <div class="roririro-footer-center-buttons">
+                        <a href="https://mcskill.net/start" class="roririro-footer-gradient-buttons">Начать игру</a>
+                    </div>
+                    <div class="roririro-footer-right-buttons">
+                        <a href="https://mcskill.net/support" class="roririro-footer-gradient-button">Помощь</a>
+                        <a href="https://mcskill.net/servers" class="roririro-footer-gradient-button">Сервера</a>
+                        <a href="https://mcskill.net/rules" class="roririro-footer-gradient-button">Правила</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<script src="./script.js" defer></script>
+</body>
+</html>

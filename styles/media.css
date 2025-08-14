@@ -1,0 +1,101 @@
+/* Медиа-запросы для навбара */
+@media (min-width: 2000px) {
+    .logo-img {
+        width: 300px; /* Ширина логотипа */
+        margin-left: 200px; /* Сдвигаем логотип вправо */
+    }
+}
+@media (max-width: 1200px) {
+    .logo-img {
+        width: 150px; /* Ширина логотипа */
+        margin-left: 10px; /* Сдвигаем логотип вправо */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        width: 120px; /* Ширина логотипа */
+        margin-left: 10px; /* Сдвигаем логотип вправо */
+    }
+}
+/* Медиа-запросы для навбара */
+
+@media (min-width: 2000px) {
+    .nav-item-link {
+        font-size: 35px; /* Размер шрифта относительно ширины экрана */
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 1200px) {
+    .nav-item-link {
+        font-size: 20px; /* Размер шрифта относительно ширины экрана */
+        padding: 10px 10px;
+    }
+}
+@media (max-width: 768px) {
+    .nav-item-link {
+        font-size: 15px; /* Размер шрифта относительно ширины экрана */
+        padding: 10px 5px;
+    }
+}
+@media (max-width: 568px) {
+    .nav-item-link {
+        font-size: 13px; /* Размер шрифта относительно ширины экрана */
+        padding: 0px 0px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .nav-container {
+        max-width: 1200px; /* Максимальная ширина контейнера */
+        margin: 0 auto; /* Центрирование */
+        padding: 0 20px; /* Фиксированные отступы */
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-container {
+        max-width: 660px; /* Максимальная ширина контейнера */
+        margin: 0 auto; /* Центрирование */
+        padding: 0 20px; /* Фиксированные отступы */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        max-width: 460px; /* Максимальная ширина контейнера */
+        margin: 0 auto; /* Центрирование */
+        padding: 0 20px; /* Фиксированные отступы */
+    }
+}
+
+@media (max-width: 768px) {
+    .bottom-tab {
+        height: 150px; 
+        border-top-left-radius: 25px; 
+        border-top-right-radius: 25px; 
+    }
+}
+
+/* Медиа-запросы для адаптации */
+@media (max-width: 1200px) {
+    .overlay-img {
+        width: 70vw; /* Увеличиваем ширину для меньших экранов */
+    }
+
+    .bottom-tab {
+        height: 25vh; /* Увеличиваем высоту для меньших экранов */
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-img {
+        width: 80vw; /* Еще больше для мобильных устройств */
+    }
+
+    .bottom-tab {
+        height: 30vh;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+    }
+}

@@ -1,0 +1,233 @@
+.roririro-crt2x-additional-image {
+    max-width: 400px;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 60px auto;
+    display: block;
+    filter: drop-shadow(0 5px 15px rgba(218, 86, 112, 0.4));
+    transform-style: preserve-3d;
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Общие стили для секции */
+.roririro-crt2x-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.roririro-crt2x-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Общие стили для карточек */
+.roririro-crt2x-tournament-card,
+.roririro-crt2x-quest-card {
+  flex: 1;
+  min-width: 0;
+  max-width: 800px;
+  padding: 60px;
+  border-radius: 80px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.roririro-crt2x-tournament-card:hover,
+.roririro-crt2x-quest-card:hover {
+  transform: scale(1.02);
+}
+
+/* Стили для карточки tournament */
+.roririro-crt2x-tournament-card {
+  --roririro-primary: #084fad;
+  --roririro-secondary: #88e2ec;
+  --roririro-accent: #779fd7;
+  --roririro-dark: #2D3436;
+}
+
+/* Стили для карточки quest */
+.roririro-crt2x-quest-card {
+  --roririro-primary: #89f8ce;
+  --roririro-secondary: #c5e77c;
+  --roririro-accent: #04c1ea;
+  --roririro-dark: #2D3436;
+}
+
+/* Общие стили для содержимого карточек */
+.roririro-crt2x-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.roririro-crt2x-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.roririro-crt2x-content-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.roririro-crt2x-feature-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.roririro-crt2x-img-box {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.roririro-crt2x-feature-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.roririro-crt2x-img-box:hover .roririro-crt2x-feature-img {
+  transform: scale(1.05);
+}
+
+.roririro-crt2x-img-border {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--roririro-primary), var(--roririro-secondary));
+  border-radius: 18px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.roririro-crt2x-text-block {
+  flex: 1;
+  padding: 10px;
+}
+
+.roririro-crt2x-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--roririro-primary), var(--roririro-secondary));
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 1.0rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.roririro-crt2x-title {
+  font-size: 1.8rem;
+  color: var(--roririro-dark);
+  margin-bottom: 15px;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+}
+
+.roririro-crt2x-title:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--roririro-primary), var(--roririro-secondary));
+}
+
+.roririro-crt2x-desc {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: var(--roririro-dark);
+  margin-bottom: 25px;
+}
+
+.roririro-crt2x-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.roririro-crt2x-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roririro-crt2x-stat-number {
+  font-size: 1.5rem;
+  font-weight: 1000;
+  color: var(--roririro-primary);
+  line-height: 1;
+}
+
+.roririro-crt2x-stat-text {
+  font-size: 1.1rem;
+  color: var(--roririro-dark);
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+  .roririro-crt2x-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .roririro-crt2x-tournament-card,
+  .roririro-crt2x-quest-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .roririro-crt2x-tournament-card,
+  .roririro-crt2x-quest-card {
+    padding: 30px;
+    border-radius: 40px;
+  }
+  
+  .roririro-crt2x-title {
+    font-size: 1.5rem;
+  }
+  
+  .roririro-crt2x-desc {
+    font-size: 1rem;
+  }
+}
