@@ -273,7 +273,7 @@
     user-select: none;
     position: relative; /* Изменено с relative/absolute на fixed */
     right: 0vw; /* Позиционирование справа */
-    bottom: -7vw; /* Позиционирование снизу */
+    bottom: -150px; /* Позиционирование снизу */
     transform: translateX(0); /* Начальное положение */
     transition: transform 2s ease, box-shadow 0.4s ease, background 0.4s ease; /* Добавлен transform в transition */
 }

@@ -55,34 +55,45 @@ body, html {
 /* Новые анимированные изображения по бокам */
 .side-image-left {
     position: fixed;
-    left: -300px;
+    left: -500px;
     top: 50%;
     transform: translateY(-50%);
     width: 450px;
     height: auto;
     z-index: -5;
-    animation: slideInLeft 3.5s ease-out forwards 1s;
+    animation: 
+        slideInLeft 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        floatLeft 8s ease-in-out infinite 2s;
     filter: drop-shadow(0 0 15px rgba(109, 228, 252, 0.7));
-    opacity: 0.8;
+    opacity: 0;
+    will-change: transform;
 }
 
 .side-image-right {
     position: fixed;
-    right: -300px;
+    right: -500px;
     top: 50%;
     transform: translateY(-50%);
     width: 450px;
     height: auto;
     z-index: -5;
-    animation: slideInRight 3.5s ease-out forwards 1s;
+    animation: 
+        slideInRight 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        floatRight 8s ease-in-out infinite 2s;
     filter: drop-shadow(0 0 15px rgba(253, 147, 205, 0.7));
-    opacity: 0.8;
+    opacity: 0;
+    will-change: transform;
 }
 
+/* Анимация входа с замедлением */
 @keyframes slideInLeft {
     0% {
-        left: -300px;
+        left: -500px;
         opacity: 0;
+    }
+    70% {
+        left: 50px;
+        opacity: 2.6;
     }
     100% {
         left: 20px;
@@ -92,8 +103,12 @@ body, html {
 
 @keyframes slideInRight {
     0% {
-        right: -300px;
+        right: -500px;
         opacity: 0;
+    }
+    70% {
+        right: 50px;
+        opacity: 0.6;
     }
     100% {
         right: 20px;
@@ -101,6 +116,24 @@ body, html {
     }
 }
 
+/* Анимация парения */
+@keyframes floatLeft {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0) rotate(-2deg);
+    }
+    50% {
+        transform: translateY(-53%) translateX(5px) rotate(2deg);
+    }
+}
+
+@keyframes floatRight {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0) rotate(2deg);
+    }
+    50% {
+        transform: translateY(-53%) translateX(-5px) rotate(-2deg);
+    }
+}
 .overlay-img {
     position: absolute;
     top: 32%;
