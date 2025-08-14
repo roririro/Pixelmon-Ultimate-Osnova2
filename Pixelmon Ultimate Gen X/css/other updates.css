@@ -1,0 +1,241 @@
+   :root {
+            --roririro-cr6x-primary: #6de4fc;
+            --roririro-cr6x-secondary: #fd93cd;
+            --roririro-cr6x-accent: #ef2968;
+            --roririro-cr6x-dark: #1a1a1a;
+            --roririro-cr6x-light: #ffffff;
+            --roririro-cr6x-card-bg: rgba(255, 255, 255, 0.1);
+            --roririro-cr6x-text-dark: #1f1f1fd9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        
+        @font-face {
+            font-family: 'Genshin_Impact';
+            src: url('path/to/genshin-font.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        .roririro-cr6x-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        .roririro-cr6x-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, rgba(109, 228, 252, 0.15) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .roririro-cr6x-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
+            perspective: 1000px;
+        }
+        
+        .roririro-cr6x-important-card {
+            grid-column: 1 / -1;
+            background: var(--roririro-cr6x-card-bg);
+            border-radius: 80px;
+            padding: 40px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(239, 41, 104, 0.4);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            margin-bottom: 30px;
+        }
+        
+        .roririro-cr6x-important-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                transparent 45%,
+                rgba(239, 41, 104, 0.2) 50%,
+                transparent 55%
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
+        .roririro-cr6x-card {
+            background: var(--roririro-cr6x-card-bg);
+            border-radius: 80px;
+            padding: 35px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(109, 228, 252, 0.2);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        
+        .roririro-cr6x-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                transparent 45%,
+                rgba(109, 228, 252, 0.1) 50%,
+                transparent 55%
+            );
+            transform: rotate(30deg);
+            animation: shine9 6s infinite;
+            opacity: 0;
+        }
+        
+        .roririro-cr6x-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border-color: rgba(109, 228, 252, 0.4);
+        }
+        
+        .roririro-cr6x-card:hover::before {
+            animation: shine9 3s infinite;
+        }
+        
+        .roririro-cr6x-important-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border-color: rgba(239, 41, 104, 0.6);
+        }
+        
+        @keyframes shine9 {
+            0% {
+                transform: rotate(30deg) translate(-30%, -30%);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: rotate(30deg) translate(30%, 30%);
+                opacity: 0;
+            }
+        }
+        
+        .roririro-cr6x-category {
+            display: inline-block;
+            padding: 10px 22px;
+            background: linear-gradient(135deg, var(--roririro-cr6x-primary), var(--roririro-cr6x-secondary));
+            color: white;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(109, 228, 252, 0.4);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .roririro-cr6x-important-category {
+            background: linear-gradient(135deg, #ef2968, #c91a5a);
+            box-shadow: 0 5px 15px rgba(239, 41, 104, 0.4);
+        }
+        
+        .roririro-cr6x-category::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                      transparent, 
+                      rgba(255, 255, 255, 0.3), 
+                      transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .roririro-cr6x-category:hover::after {
+            transform: translateX(100%);
+        }
+        
+        .roririro-cr6x-content {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--roririro-cr6x-text-dark);
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .roririro-cr6x-important-content {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        
+        /* Категории */
+        .roririro-cr6x-fixes { 
+            background: linear-gradient(135deg, #6de4fc, #4ab7fc);
+        }
+        .roririro-cr6x-new { 
+            background: linear-gradient(135deg, #fd93cd, #ef2968);
+        }
+        .roririro-cr6x-pokemon { 
+            background: linear-gradient(135deg, #ef2968, #c91a5a);
+        }
+        .roririro-cr6x-minecraft { 
+            background: linear-gradient(135deg, #6de4fc, #00b4d8);
+        }
+        
+        /* Анимация фона */
+        .roririro-cr6x-bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.15;
+        }
+        
+        @media (max-width: 768px) {
+            .roririro-cr6x-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .roririro-cr6x-card, .roririro-cr6x-important-card {
+                padding: 30px;
+            }
+            
+            .roririro-cr6x-content {
+                font-size: 1.2rem;
+            }
+            
+            .roririro-cr6x-important-content {
+                font-size: 1.4rem;
+            }
+        }

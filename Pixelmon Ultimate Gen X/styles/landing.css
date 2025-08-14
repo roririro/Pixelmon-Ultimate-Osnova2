@@ -272,7 +272,7 @@
     margin-top: 0vw;
     user-select: none;
     position: fixed; /* Изменено с relative/absolute на fixed */
-    right: -6vw; /* Позиционирование справа */
+    right: -7vw; /* Позиционирование справа */
     bottom: 0vw; /* Позиционирование снизу */
     transform: translateX(0); /* Начальное положение */
     transition: transform 2s ease, box-shadow 0.4s ease, background 0.4s ease; /* Добавлен transform в transition */
