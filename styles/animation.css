@@ -1,0 +1,352 @@
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        width: 10vw;
+        opacity: 0;
+    }
+    100% {
+        width: 50vw;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Анимация вращения лучей */
+@keyframes rotateRays {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes moveGradients {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    75% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes cyberpunkGlow {
+    0% {
+        filter: brightness(2) drop-shadow(0 0 5px #00fffc);
+    }
+    20% {
+        filter: brightness(2) drop-shadow(0 0 10px #ff00ff);
+    }
+    40% {
+        filter: brightness(2) drop-shadow(0 0 15px #fc00ff);
+    }
+    60% {
+        filter: brightness(2) drop-shadow(0 0 20px #00fffc);
+    }
+    80% {
+        filter: brightness(2) drop-shadow(0 0 15px #ff00ff);
+    }
+    100% {
+        filter: brightness(2) drop-shadow(0 0 10px #00fffc);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalZoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modalZoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0) rotateX(5deg) rotateY(5deg); }
+    50% { transform: translateY(-20px) rotateX(-5deg) rotateY(-5deg); }
+}
+
+
+@keyframes gridMove {
+    0% { 
+        transform: translate(-15%, -15%) rotate(0deg) translateZ(-1px); 
+    }
+    25% { 
+        transform: translate(0%, -15%) rotate(5deg) translateZ(-1px); 
+    }
+    50% { 
+        transform: translate(-15%, 0%) rotate(0deg) translateZ(-1px); 
+    }
+    75% { 
+        transform: translate(0%, 0%) rotate(-5deg) translateZ(-1px); 
+    }
+    100% { 
+        transform: translate(-15%, -15%) rotate(0deg) translateZ(-1px); 
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleGlow {
+    0% { text-shadow: 2px 2px 0 #fe80a8, 4px 4px 0 rgba(150, 28, 38, 0.2); }
+    100% { text-shadow: 4px 4px 0 #fe80a8, 8px 8px 0 rgba(150, 28, 38, 0.2); }
+}
+
+
+@keyframes iconFloat {
+    0%, 100% { transform: scale(1.15) translateY(0) translateZ(50px); }
+    50% { transform: scale(1.15) translateY(-10px) translateZ(50px); }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+}
+
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0) rotateX(5deg) rotateY(5deg); }
+    50% { transform: translateY(-20px) rotateX(-5deg) rotateY(-5deg); }
+}
+
+
+@keyframes pulseRays {
+    0%, 100% { transform: scale(0.95); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes rotateRays {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateWaves {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes floatParticles {
+    0% {
+        transform: translateY(100vh) translateX(var(--start-x));
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100px) translateX(var(--end-x));
+        opacity: 0;
+    }
+}
+
+@keyframes cardFloat {
+    0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg) translateZ(0); }
+    50% { transform: translateY(-10px) rotateX(2deg) rotateY(2deg) translateZ(10px); }
+}
+
+
+@keyframes avatarPulse {
+    0%, 100% { 
+        transform: translateZ(30px) scale(1);
+        box-shadow: 
+            0 5px 15px rgba(68, 134, 90, 0.3),
+            inset 0 0 10px rgba(168, 255, 191, 0.2);
+    }
+    50% { 
+        transform: translateZ(30px) scale(1.05);
+        box-shadow: 
+            0 8px 20px rgba(68, 134, 90, 0.4),
+            inset 0 0 15px rgba(168, 255, 191, 0.3);
+    }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+}
+
+
+@keyframes iconFloat {
+    0%, 100% { transform: scale(1.15) translateY(0) translateZ(50px); }
+    50% { transform: scale(1.15) translateY(-10px) translateZ(50px); }
+}
+
+@keyframes textGlow {
+    0%, 100% { 
+        text-shadow: 
+            1px 1px 0 rgba(168, 255, 191, 0.3),
+            0 0 5px rgba(68, 134, 90, 0.1);
+    }
+    50% { 
+        text-shadow: 
+            2px 2px 0 rgba(168, 255, 191, 0.3),
+            0 0 10px rgba(68, 134, 90, 0.3);
+    }
+}
+
+@keyframes rolePulse {
+    0%, 100% { opacity: 0.9; transform: translateZ(20px) scale(1); }
+    50% { opacity: 1; transform: translateZ(20px) scale(1.05); }
+}
+
+/* Анимации для каждого луча */
+@keyframes rotateRay1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateRay2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(60deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(420deg);
+    }
+}
+
+@keyframes rotateRay3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(480deg);
+    }
+}
+
+@keyframes rotateRay4 {
+    0% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(540deg);
+    }
+}
+
+@keyframes rotateRay5 {
+    0% {
+        transform: translate(-50%, -50%) rotate(240deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(600deg);
+    }
+}
+
+@keyframes rotateRay6 {
+    0% {
+        transform: translate(-50%, -50%) rotate(300deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(660deg);
+    }
+}
+
+@keyframes float-left {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-2vh) rotate(10deg);
+    }
+}
+
+@keyframes float-right {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(2vh) rotate(-10deg); 
+    }
+}
+/* Анимация парения */
+@keyframes floatt {
+    0%, 100% {
+        transform: translateY(0); /* Начальная и конечная позиция */
+    }
+    50% {
+        transform: translateY(-20px); /* Подъем вверх */
+    }
+}
