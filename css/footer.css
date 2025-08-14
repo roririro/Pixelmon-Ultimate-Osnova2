@@ -1,0 +1,149 @@
+
+.roririro-footer-main-content {
+    min-height: calc(100vh - 200px);
+}
+
+.roririro-footer {
+    background: rgb(0, 0, 0) !important;
+    padding: 80px 0 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.roririro-footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #000; /* Черный фон */
+    background-size: 100% 100%;
+    animation: roririro-footer-gradientAnimation 10s ease infinite;
+    border-top-left-radius: 62px;
+    border-top-right-radius: 62px;
+    padding: 20px;
+}
+
+.roririro-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.roririro-footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 20px;
+    user-select: none;
+}
+
+.roririro-footer-logo img {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.roririro-footer-left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.roririro-footer-top-buttons {
+    display: flex;
+    gap: 10px;
+    user-select: none;
+}
+
+.roririro-footer-button {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 20%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: visible;
+    position: relative;
+}
+
+.roririro-footer-button:hover {
+    transform: scale(1.2);
+}
+
+.roririro-footer-button1 {
+    background-image: url('../../img/bottom/ds.webp');
+    user-select: none;
+}
+
+.roririro-footer-button2 {
+    background-image: url('../../img/bottom/vk.webp');
+    user-select: none;
+}
+
+.roririro-footer-button3 {
+    background-image: url('../../img/bottom/tg.webp');
+    user-select: none;
+}
+
+.roririro-footer-center-buttons {
+    display: flex;
+    font-family: "Genshin_Impact", sans-serif;
+    flex-direction: column;
+    gap: 10px;
+    user-select: none;
+}
+
+.roririro-footer-gradient-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.5vw;
+    cursor: pointer;
+    user-select: none;
+}
+
+.roririro-footer-gradient-buttons {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.7vw;
+    cursor: pointer;
+    user-select: none;
+}
+
+.roririro-footer-gradient-button:hover, 
+.roririro-footer-gradient-buttons:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+.roririro-footer-right-buttons {
+    display: flex;
+    font-family: "Genshin_Impact", sans-serif;
+    gap: 12px;
+    user-select: none;
+}
+
+@keyframes roririro-footer-gradientAnimation {
+    0% { background-size: 100% 100%; }
+    50% { background-size: 105% 105%; }
+    100% { background-size: 100% 100%; }
+}
