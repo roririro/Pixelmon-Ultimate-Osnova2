@@ -1,2 +1,0 @@
-# Pixelmon-Ultimate-Osnova2
-
