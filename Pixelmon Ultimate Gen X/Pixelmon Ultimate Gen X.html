@@ -1260,16 +1260,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     animateCards();
-    
-    // 3D эффект при наведении с перспективой и тенями
-    const columns = document.querySelectorAll('.roririro-top-column');
-    let isHovering = false;
-    let animationFrameId = null;
+
     
     columns.forEach(column => {
-        // Добавляем перспективу для более выраженного 3D эффекта
-        column.style.perspective = '1000px';
-        column.style.transformStyle = 'preserve-3d';
+
         
         // Состояние для каждой колонки
         const state = {
