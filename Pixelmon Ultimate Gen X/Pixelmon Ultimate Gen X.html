@@ -34,8 +34,8 @@ body, html {
     background: white;
     margin: 0;
     padding: 0;
+        font-weight: 800;
 }
-
 /* Фоновое изображение */
 .background-img {
     position: fixed;
@@ -52,6 +52,54 @@ body, html {
     z-index: -10; /* Фон должен быть ниже контента */
 }
 
+/* Новые анимированные изображения по бокам */
+.side-image-left {
+    position: fixed;
+    left: -300px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: auto;
+    z-index: -5;
+    animation: slideInLeft 3.5s ease-out forwards 1s;
+    filter: drop-shadow(0 0 15px rgba(109, 228, 252, 0.7));
+    opacity: 0.8;
+}
+
+.side-image-right {
+    position: fixed;
+    right: -300px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: auto;
+    z-index: -5;
+    animation: slideInRight 3.5s ease-out forwards 1s;
+    filter: drop-shadow(0 0 15px rgba(253, 147, 205, 0.7));
+    opacity: 0.8;
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -300px;
+        opacity: 0;
+    }
+    100% {
+        left: 20px;
+        opacity: 0.8;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        right: -300px;
+        opacity: 0;
+    }
+    100% {
+        right: 20px;
+        opacity: 0.8;
+    }
+}
 
 .overlay-img {
     position: absolute;
@@ -82,6 +130,7 @@ body, html {
     animation: fadeIn 2s ease-out forwards; 
     z-index: 1; 
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -92,7 +141,6 @@ body, html {
         transform: translate(-50%, -50%);
     }
 }
-
 
 .roririro-top-additional-image {
     max-width: 600px;
@@ -147,7 +195,6 @@ body, html {
             rotateY(-5deg);
     }
 }
-
 </style>
 
 
@@ -219,6 +266,9 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
 
     <div class="overlay-container">
         <div class="background-img"></div>
+<!-- Добавьте эти элементы в ваш HTML -->
+<img src="./img/cart/17 1.png" alt="Левое изображение" class="side-image-left">
+<img src="./img/cart/37 1.png" alt="Правое изображение" class="side-image-right">
         <div class="overlay-img"></div>
         <div class="bottom-tab"></div>
         
@@ -289,7 +339,7 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
     padding: 2vw;
     width: 100%; /* Занимает всю доступную ширину */
     margin: 0 auto;
-    margin-top: 10vh; /* Отступ сверху, равный высоте фона */
+    margin-top: 20vh; /* Отступ сверху, равный высоте фона */
     z-index: 1; /* Контент должен быть выше фона */
     background-color: #ffffff; /* Цвет фона секции */
 }
@@ -484,7 +534,7 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
       <div class="roririro-silhouette">
         <img src="./img/cart/37 1.png" alt="Силуэт покемона">
       </div>
-      <div class="roririro-reveal1">
+      <div class="roririro-reveal">
         <img src="./img/cart/37 1.png" alt="MissingNo404" class="roririro-image">
         <div class="roririro-info">
           <h3>MissingNo404</h3>
@@ -538,10 +588,10 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
 </section>
 
 <script>
-document.querySelectorAll('.roririro-card, .roririro-card1').forEach(card => {
+document.querySelectorAll('.roririro-card .roririro-card1').forEach(card => {
   card.addEventListener('click', function() {
     // Закрываем все другие карточки
-    document.querySelectorAll('.roririro-card, .roririro-card1').forEach(c => {
+    document.querySelectorAll('.roririro-card1.roririro-card1').forEach(c => {
       if (c !== this) c.classList.remove('active');
     });
     
@@ -564,41 +614,6 @@ document.querySelectorAll('.roririro-card, .roririro-card1').forEach(card => {
 
 
 </section>
-<div class="auroratech-section2"></div>
-<section class="roririro-crystals-2xs-section">
-  <img src="./img/zagol/9th generation expansion.png" alt="Башня бесконечности" class="roririro-top-additional-image">
-  <div class="roririro-crystals-2xs-container">
-    <div class="roririro-crystals-2xs-card">
-      <div class="roririro-crystals-2xs-bg-wrap">
-        <div class="roririro-crystals-2xs-bg" style="background-image: url('./img/cart/Rectangle\ 334190.png');"></div>
-      </div>
-      <div class="roririro-crystals-2xs-content-wrap">
-        <div class="roririro-crystals-2xs-feature-block">
-          <div class="roririro-crystals-2xs-text-block">
-            <span class="roririro-crystals-2xs-badge">ЭКСКЛЮЗИВ</span>
-            <h3 class="roririro-crystals-2xs-title">Все покемоны 9-го поколения добавлены и доступны</h3>
-            <p class="roririro-crystals-2xs-desc">Абсолютно все представители 9-го поколения были добавлены на сервер, начиная от Dipplin (1011) и заканчивая Pecharunt (1025), они получили 3д модели и полный перечень своих уникальных способностей и атак, всю подробную информацию об интересующих покемонах можно узнать на сервере с помощью команды /pwiki имя покемона.</p>
-
-          </div>
-          <div class="roririro-crystals-2xs-img-block">
-            <div class="roririro-crystals-2xs-img-box">
-              <img src="./img/cart/Group 3678.png" alt="Башня бесконечности" class="roririro-crystals-2xs-feature-img">
-              <div class="roririro-crystals-2xs-img-border"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
 <div class="auroratech-section2"></div>
 <section class="roririro-cartis2x-section">
   <img src="./img/zagol/automatic tournaments.png" alt="Башня бесконечности" class="roririro-top-additional-image">
@@ -635,50 +650,6 @@ document.querySelectorAll('.roririro-card, .roririro-card1').forEach(card => {
     </div>
   </div>
 </section>
-
-<div class="auroratech-section2"></div>
-<section class="roririro-lvl-poke-section">
-  <img src="./img/zagol/server economy rework.png" alt="Башня бесконечности" class="roririro-top-additional-image">
-  <div class="roririro-lvl-poke-container">
-    <div class="roririro-lvl-poke-card">
-      <div class="roririro-lvl-poke-bg-wrap">
-        <div class="roririro-lvl-poke-bg" style="background-image: url('./img/cart/Rectangle\ 317690.png');"></div>
-      </div>
-      <div class="roririro-lvl-poke-content-wrap">
-        <div class="roririro-lvl-poke-feature-block">
-          <div class="roririro-lvl-poke-img-box">
-            <img src="./img/cart/GimmighoulCoins 1.png" alt="Покемоны" class="roririro-lvl-poke-feature-img">
-            <div class="roririro-lvl-poke-img-border"></div>
-          </div>
-          <div class="roririro-lvl-poke-text-block">
-            <span class="roririro-lvl-poke-badge">Обновление</span>
-            <h3 class="roririro-lvl-poke-title">Реформа экономики и редкости покемонов</h3>
-            <p class="roririro-lvl-poke-desc">Редкость легендарных покемонов на сервере была значительно увеличена благодаря увеличению цен на кейсы с легендарными покемонами, а так же за-счет добавления тега untradeable (не позволяет обменять или выставить на рынок данного покемона) на легенд выпадающих из кейсов или же на покупаемых в онлайн магазине. <br>По мимо этого так же была увеличена редкость части Магических камней, таких как Шайни камень и Камень клонирования.</p>
-                <div class="roririro-lvl-poke-stats">
-                <div class="roririro-lvl-poke-stat-item">
-                    <span class="roririro-lvl-poke-stat-number">✔</span>
-                    <span class="roririro-lvl-poke-stat-text">Экономика</span>
-                </div>
-                <div class="roririro-lvl-poke-stat-item">
-                    <span class="roririro-lvl-poke-stat-number">✔</span>
-                    <span class="roririro-lvl-poke-stat-text">Untradeable</span>
-                </div>
-                <div class="roririro-lvl-poke-stat-item">
-                    <span class="roririro-lvl-poke-stat-number">✔</span>
-                    <span class="roririro-lvl-poke-stat-text">Редкие камни</span>
-                </div>
-                <div class="roririro-lvl-poke-stat-item">
-                    <span class="roririro-lvl-poke-stat-number">✔</span>
-                    <span class="roririro-lvl-poke-stat-text">Статус</span>
-                </div>
-                </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <div class="auroratech-section2"></div>
 
@@ -773,6 +744,42 @@ document.querySelectorAll('.roririro-card, .roririro-card1').forEach(card => {
       </div>
     </div>
   </div>
+</section>
+
+
+
+
+
+
+<div class="auroratech-section2"></div>
+<section class="roririro-crystals-2xs-section">
+  <img src="./img/zagol/9th generation expansion.png" alt="Башня бесконечности" class="roririro-top-additional-image">
+  <div class="roririro-crystals-2xs-container">
+    <div class="roririro-crystals-2xs-card">
+      <div class="roririro-crystals-2xs-bg-wrap">
+        <div class="roririro-crystals-2xs-bg" style="background-image: url('./img/cart/Rectangle\ 334190.png');"></div>
+      </div>
+      <div class="roririro-crystals-2xs-content-wrap">
+        <div class="roririro-crystals-2xs-feature-block">
+          <div class="roririro-crystals-2xs-text-block">
+            <span class="roririro-crystals-2xs-badge">ЭКСКЛЮЗИВ</span>
+            <h3 class="roririro-crystals-2xs-title">Все покемоны 9-го поколения добавлены и доступны</h3>
+            <p class="roririro-crystals-2xs-desc">Абсолютно все представители 9-го поколения были добавлены на сервер, начиная от Dipplin (1011) и заканчивая Pecharunt (1025), они получили 3д модели и полный перечень своих уникальных способностей и атак, всю подробную информацию об интересующих покемонах можно узнать на сервере с помощью команды /pwiki имя покемона.</p>
+
+          </div>
+          <div class="roririro-crystals-2xs-img-block">
+            <div class="roririro-crystals-2xs-img-box">
+              <img src="./img/cart/Group 3678.png" alt="Башня бесконечности" class="roririro-crystals-2xs-feature-img">
+              <div class="roririro-crystals-2xs-img-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -781,6 +788,48 @@ document.querySelectorAll('.roririro-card, .roririro-card1').forEach(card => {
 <div class="auroratech-section2"></div>
 
 
+<section class="roririro-lvl-poke-section">
+  <img src="./img/zagol/server economy rework.png" alt="Башня бесконечности" class="roririro-top-additional-image">
+  <div class="roririro-lvl-poke-container">
+    <div class="roririro-lvl-poke-card">
+      <div class="roririro-lvl-poke-bg-wrap">
+        <div class="roririro-lvl-poke-bg" style="background-image: url('./img/cart/Rectangle\ 317690.png');"></div>
+      </div>
+      <div class="roririro-lvl-poke-content-wrap">
+        <div class="roririro-lvl-poke-feature-block">
+          <div class="roririro-lvl-poke-img-box">
+            <img src="./img/cart/GimmighoulCoins 1.png" alt="Покемоны" class="roririro-lvl-poke-feature-img">
+            <div class="roririro-lvl-poke-img-border"></div>
+          </div>
+          <div class="roririro-lvl-poke-text-block">
+            <span class="roririro-lvl-poke-badge">Обновление</span>
+            <h3 class="roririro-lvl-poke-title">Реформа экономики и редкости покемонов</h3>
+            <p class="roririro-lvl-poke-desc">Редкость легендарных покемонов на сервере была значительно увеличена благодаря увеличению цен на кейсы с легендарными покемонами, а так же за-счет добавления тега untradeable (не позволяет обменять или выставить на рынок данного покемона) на легенд выпадающих из кейсов или же на покупаемых в онлайн магазине. <br>По мимо этого так же была увеличена редкость части Магических камней, таких как Шайни камень и Камень клонирования.</p>
+                <div class="roririro-lvl-poke-stats">
+                <div class="roririro-lvl-poke-stat-item">
+                    <span class="roririro-lvl-poke-stat-number">✔</span>
+                    <span class="roririro-lvl-poke-stat-text">Экономика</span>
+                </div>
+                <div class="roririro-lvl-poke-stat-item">
+                    <span class="roririro-lvl-poke-stat-number">✔</span>
+                    <span class="roririro-lvl-poke-stat-text">Untradeable</span>
+                </div>
+                <div class="roririro-lvl-poke-stat-item">
+                    <span class="roririro-lvl-poke-stat-number">✔</span>
+                    <span class="roririro-lvl-poke-stat-text">Редкие камни</span>
+                </div>
+                <div class="roririro-lvl-poke-stat-item">
+                    <span class="roririro-lvl-poke-stat-number">✔</span>
+                    <span class="roririro-lvl-poke-stat-text">Статус</span>
+                </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
 <!-- Новая секция -->
 <div class="roririro-auroratech-section2"></div>
 <img src="./img/zagol/other updates.png" alt="Дополнительное изображение" class="roririro-top-additional-image">

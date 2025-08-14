@@ -256,8 +256,8 @@
 .start-game-btn {
     font-family: 'Genshin_Impact', sans-serif;
     display: inline-block;
-    padding: 0.5vw 5vw;
-    font-size: 1.8vw;
+    padding: 1vw 5vw;
+    font-size: 2vw;
     letter-spacing: -1px;
     color: rgb(255, 255, 255);
     background: linear-gradient(0deg, #14324c, #780b26);
@@ -271,9 +271,9 @@
     overflow: hidden;
     margin-top: 0vw;
     user-select: none;
-    position: fixed; /* Изменено с relative/absolute на fixed */
-    right: -7vw; /* Позиционирование справа */
-    bottom: 0vw; /* Позиционирование снизу */
+    position: relative; /* Изменено с relative/absolute на fixed */
+    right: 0vw; /* Позиционирование справа */
+    bottom: -7vw; /* Позиционирование снизу */
     transform: translateX(0); /* Начальное положение */
     transition: transform 2s ease, box-shadow 0.4s ease, background 0.4s ease; /* Добавлен transform в transition */
 }
