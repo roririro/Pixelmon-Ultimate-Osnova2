@@ -36,88 +36,212 @@ body, html {
     padding: 0;
         font-weight: 800;
 }
-/* Фоновое изображение */
 .background-img {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #000000;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(0px) brightness(100%);
-    transition: filter 0.5s ease;
-    z-index: -10; /* Фон должен быть ниже контента */
+    background: 
+        /* Основные акцентные градиенты */
+        radial-gradient(circle at 20% 30%, 
+            rgba(2, 152, 132, 0.8) 0%,  /* #029884 */
+            transparent 60%),
+        radial-gradient(ellipse at 80% 50%, 
+            rgba(121, 10, 37, 0.7) 0%,  /* #790a25 */
+            transparent 70%),
+        radial-gradient(ellipse at 30% 70%, 
+            rgba(18, 50, 76, 0.6) 0%,  /* #12324c */
+            transparent 80%),
+        
+        /* Фоновые градиенты */
+        linear-gradient(135deg, 
+            #12324c 0%, 
+            #029884 25%, 
+            #790a25 50%, 
+            #12324c 75%, 
+            #029884 100%),
+        
+        /* Текстура */
+        repeating-linear-gradient(
+            45deg,
+            rgba(2, 152, 132, 0.1) 0px,
+            rgba(2, 152, 132, 0.1) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    
+    background-blend-mode: overlay, screen, color-dodge, multiply, normal;
+    filter: contrast(1.3) brightness(0.95);
+    z-index: -10;
+    animation: 
+        gradientShift 25s ease infinite alternate,
+        hueRotate 60s linear infinite;
 }
+
+@keyframes gradientShift {
+    0% {
+        background-position: 
+            0% 0%, 
+            100% 100%, 
+            50% 50%, 
+            0% 0%,
+            0% 0%;
+        filter: contrast(1.3) brightness(0.95);
+    }
+    25% {
+        background-position: 
+            10% 30%, 
+            90% 70%, 
+            40% 60%, 
+            25% 25%,
+            0% 0%;
+    }
+    50% {
+        background-position: 
+            20% 20%, 
+            80% 80%, 
+            60% 40%, 
+            50% 50%,
+            0% 0%;
+        filter: contrast(1.4) brightness(0.9);
+    }
+    75% {
+        background-position: 
+            30% 40%, 
+            70% 60%, 
+            50% 70%, 
+            75% 75%,
+            0% 0%;
+    }
+    100% {
+        background-position: 
+            40% 10%, 
+            60% 90%, 
+            70% 30%, 
+            100% 100%,
+            0% 0%;
+        filter: contrast(1.2) brightness(1);
+    }
+}
+
+@keyframes hueRotate {
+    0%, 100% {
+        filter: contrast(1.3) brightness(0.95) hue-rotate(0deg);
+    }
+    50% {
+        filter: contrast(1.3) brightness(0.95) hue-rotate(15deg);
+    }
+}
+
+/* Добавляем мерцающие частицы */
+.background-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, 
+            rgba(2, 152, 132, 0.3) 0%, 
+            transparent 20%),
+        radial-gradient(circle at 80% 50%, 
+            rgba(121, 10, 37, 0.3) 0%, 
+            transparent 20%),
+        radial-gradient(circle at 50% 80%, 
+            rgba(18, 50, 76, 0.3) 0%, 
+            transparent 20%);
+    animation: particlesMove 15s linear infinite;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+@keyframes particlesMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5%, -5%);
+    }
+    50% {
+        transform: translate(5%, 5%);
+    }
+    75% {
+        transform: translate(-5%, 5%);
+    }
+    100% {
+        transform: translate(5%, -5%);
+    }
+}
+
 
 /* Новые анимированные изображения по бокам */
 .side-image-left {
-    position: fixed;
+    position: absolute;
     left: -500px;
     top: 50%;
     transform: translateY(-50%);
     width: 450px;
     height: auto;
-    z-index: -5;
+    z-index: 1;
     animation: 
-        slideInLeft 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
-        floatLeft 8s ease-in-out infinite 2s;
+        slideInLeftv 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        floatLeftv 8s ease-in-out infinite 2s;
     filter: drop-shadow(0 0 15px rgba(109, 228, 252, 0.7));
     opacity: 0;
     will-change: transform;
 }
 
 .side-image-right {
-    position: fixed;
+    position: absolute;
     right: -500px;
     top: 50%;
     transform: translateY(-50%);
     width: 450px;
     height: auto;
-    z-index: -5;
+    z-index: 1;
     animation: 
-        slideInRight 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
-        floatRight 8s ease-in-out infinite 2s;
+        slideInRightv 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        floatRightv 8s ease-in-out infinite 2s;
     filter: drop-shadow(0 0 15px rgba(253, 147, 205, 0.7));
     opacity: 0;
     will-change: transform;
 }
 
 /* Анимация входа с замедлением */
-@keyframes slideInLeft {
+@keyframes slideInLeftv {
     0% {
         left: -500px;
-        opacity: 0;
+        opacity: 1;
     }
     70% {
         left: 50px;
-        opacity: 2.6;
+        opacity: 1;
     }
     100% {
         left: 20px;
-        opacity: 0.8;
+        opacity: 1;
     }
 }
 
-@keyframes slideInRight {
+@keyframes slideInRightv {
     0% {
         right: -500px;
-        opacity: 0;
+        opacity: 1;
     }
     70% {
         right: 50px;
-        opacity: 0.6;
+        opacity: 1;
     }
     100% {
         right: 20px;
-        opacity: 0.8;
+        opacity: 1;
     }
 }
 
 /* Анимация парения */
-@keyframes floatLeft {
+@keyframes floatLeftv {
     0%, 100% {
         transform: translateY(-50%) translateX(0) rotate(-2deg);
     }
@@ -126,7 +250,7 @@ body, html {
     }
 }
 
-@keyframes floatRight {
+@keyframes floatRightv {
     0%, 100% {
         transform: translateY(-50%) translateX(0) rotate(2deg);
     }
@@ -136,10 +260,10 @@ body, html {
 }
 .overlay-img {
     position: absolute;
-    top: 32%;
-    left: 55%;
+    top: 25%;
+    left: 50%;
     height: auto;
-    background-image: url("./img/warp/logo.png");
+    background-image: url("./img/warp/model.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,8 +272,8 @@ body, html {
 }
 
 .overlay-img {
-    width: 6vw; /* Фиксированная ширина */
-    height: 20vw; /* Фиксированная высота */
+    width: 5vw; /* Фиксированная ширина */
+    height: 15vw; /* Фиксированная высота */
 }
 
 .overlay-content {
@@ -160,11 +284,44 @@ body, html {
     text-align: center;
     color: rgb(255, 255, 255);
     opacity: 0;
-    animation: fadeIn 2s ease-out forwards; 
+    animation: fadeInx 2s ease-out forwards; 
     z-index: 1; 
 }
 
-@keyframes fadeIn {
+@keyframes fadeInx {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+.overlay-img2 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    height: auto;
+    background-image: url("./img/warp/767543.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    animation: zoomIn 4s ease-out forwards;
+}
+
+.overlay-img2 {
+    width: 1vw; /* Фиксированная ширина */
+    height: 7vw; /* Фиксированная высота */
+}
+
+
+
+@keyframes fadeInx {
     0% {
         opacity: 0;
         transform: translate(-50%, -60%);
@@ -182,7 +339,7 @@ body, html {
         drop-shadow(0 10px 25px rgba(218, 86, 112, 0.6))
         brightness(1.1);
     transform-style: preserve-3d;
-    animation: floatImage 6s ease-in-out infinite;
+    animation: floatImagex 6s ease-in-out infinite;
     perspective: 1200px; /* Добавляем глубину сцены */
 }
 
@@ -200,7 +357,7 @@ body, html {
     pointer-events: none;
 }
 
-@keyframes floatImage {
+@keyframes floatImagex {
     0%, 100% { 
         transform: 
             translateY(0) 
@@ -228,6 +385,36 @@ body, html {
             rotateY(-5deg);
     }
 }
+
+.rotating-svg-container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2500px; /* Настройте размер по необходимости */
+    height: 2500px;
+    z-index: -5; /* Убедитесь, что z-index выше фоновых элементов */
+    opacity: 0.1;
+}
+
+.rotating-svg {
+    width: 100%;
+    height: 100%;
+    animation: rotate-circle 30s linear infinite;
+    transform-origin: center center;
+    filter: drop-shadow(0 0 10px rgba(109, 228, 252, 0.7));
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 </style>
 
 
@@ -297,15 +484,24 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
 <body>
     
 
-    <div class="overlay-container">
-        <div class="background-img"></div>
-<!-- Добавьте эти элементы в ваш HTML -->
-<img src="./img/cart/17 1.png" alt="Левое изображение" class="side-image-left">
-<img src="./img/cart/37 1.png" alt="Правое изображение" class="side-image-right">
-        <div class="overlay-img"></div>
-        <div class="bottom-tab"></div>
-        
+    
+
+<div class="overlay-container">
+    <div class="background-img"></div>
+    <!-- Боковые изображения -->
+    <img src="./img/cart/17 1.png" alt="Левое изображение" class="side-image-left">
+    <img src="./img/cart/37 1.png" alt="Правое изображение" class="side-image-right">
+    
+    <!-- SVG изображение с вращением -->
+    <div class="rotating-svg-container">
+        <img src="./img/warp/rays.svg" alt="Вращающееся изображение" class="rotating-svg">
     </div>
+    
+    <div class="overlay-img"></div>
+    <div class="overlay-img2"></div>
+    <div class="bottom-tab"></div>
+</div>
+
 
 
 
