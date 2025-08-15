@@ -30,11 +30,14 @@
 
 <style>
 
+
 body, html {
     background: white;
     margin: 0;
     padding: 0;
-        font-weight: 800;
+    font-weight: 800;
+
+
 }
 .background-img {
     position: fixed;
@@ -142,120 +145,139 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 20% 30%, 
-            rgba(2, 152, 132, 0.3) 0%, 
-            transparent 20%),
-        radial-gradient(circle at 80% 50%, 
-            rgba(121, 10, 37, 0.3) 0%, 
-            transparent 20%),
-        radial-gradient(circle at 50% 80%, 
-            rgba(18, 50, 76, 0.3) 0%, 
-            transparent 20%);
+    background-color: #000000;
     animation: particlesMove 15s linear infinite;
     z-index: -1;
     opacity: 0.5;
 }
 
-@keyframes particlesMove {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(-5%, -5%);
-    }
-    50% {
-        transform: translate(5%, 5%);
-    }
-    75% {
-        transform: translate(-5%, 5%);
-    }
-    100% {
-        transform: translate(5%, -5%);
-    }
-}
 
-
-/* Новые анимированные изображения по бокам */
-.side-image-left {
-    position: absolute;
-    left: -500px;
+/* Базовые стили для боковых изображений */
+.side-image-left{
+    position: fixed; /* Меняем absolute на fixed */
     top: 50%;
     transform: translateY(-50%);
-    width: 450px;
+    width: 25vw; /* Относительная ширина */
+    max-width: 450px; /* Максимальный размер */
+    min-width: 200px; /* Минимальный размер */
     height: auto;
-    z-index: 1;
-    animation: 
-        slideInLeftv 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
-        floatLeftv 8s ease-in-out infinite 2s;
+    z-index: -1;
     filter: drop-shadow(0 0 15px rgba(109, 228, 252, 0.7));
-    opacity: 0;
     will-change: transform;
+    opacity: 0;
 }
+
+
 
 .side-image-right {
-    position: absolute;
-    right: -500px;
+    position: fixed; /* Меняем absolute на fixed */
     top: 50%;
     transform: translateY(-50%);
-    width: 450px;
+    width: 25vw; /* Относительная ширина */
+    max-width: 550px; /* Максимальный размер */
+    min-width: 200px; /* Минимальный размер */
     height: auto;
-    z-index: 1;
-    animation: 
-        slideInRightv 10.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
-        floatRightv 8s ease-in-out infinite 2s;
-    filter: drop-shadow(0 0 15px rgba(253, 147, 205, 0.7));
-    opacity: 0;
+    z-index: -1;
+    filter: drop-shadow(0 0 15px rgba(109, 228, 252, 0.7));
     will-change: transform;
+    opacity: 0;
 }
 
-/* Анимация входа с замедлением */
-@keyframes slideInLeftv {
+/* Левое изображение */
+.side-image-left {
+    left: -30vw;
+    animation: 
+        slideInLeftAdaptive 7s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        floatLeft 8s ease-in-out infinite 2s;
+}
+
+/* Правое изображение */
+.side-image-right {
+    right: -30vw;
+    animation: 
+        slideInRightAdaptive 7s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s,
+        floatRight 8s ease-in-out infinite 2s;
+}
+
+/* Анимация входа */
+@keyframes slideInLeftAdaptive {
     0% {
-        left: -500px;
+        left: -30vw;
         opacity: 1;
     }
-    70% {
-        left: 50px;
+
+    100% {
+        left: -4vw;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRightAdaptive {
+    0% {
+        right: -30vw;
         opacity: 1;
     }
     100% {
-        left: 20px;
+        right: -4vw;
         opacity: 1;
     }
 }
 
-@keyframes slideInRightv {
-    0% {
-        right: -500px;
-        opacity: 1;
-    }
-    70% {
-        right: 50px;
-        opacity: 1;
-    }
-    100% {
-        right: 20px;
-        opacity: 1;
-    }
-}
-
-/* Анимация парения */
-@keyframes floatLeftv {
+/* Анимация парения (остается без изменений) */
+@keyframes floatLeft {
     0%, 100% {
         transform: translateY(-50%) translateX(0) rotate(-2deg);
     }
     50% {
-        transform: translateY(-53%) translateX(5px) rotate(2deg);
+        transform: translateY(-53%) translateX(0.3vw) rotate(2deg);
     }
 }
 
-@keyframes floatRightv {
+@keyframes floatRight {
     0%, 100% {
         transform: translateY(-50%) translateX(0) rotate(2deg);
     }
     50% {
-        transform: translateY(-53%) translateX(-5px) rotate(-2deg);
+        transform: translateY(-53%) translateX(-0.3vw) rotate(-2deg);
+    }
+}
+
+/* Медиазапросы для тонкой настройки */
+@media (max-width: 1200px) {
+    .side-image-left,
+    .side-image-right {
+        width: 30vw;
+    }
+    
+    @keyframes slideInLeftAdaptive {
+        100% { left: 1vw; }
+    }
+    @keyframes slideInRightAdaptive {
+        100% { right: 1vw; }
+    }
+}
+
+@media (max-width: 768px) {
+    .side-image-left,
+    .side-image-right {
+        width: 35vw;
+        min-width: 150px;
+        filter: drop-shadow(0 0 10px rgba(109, 228, 252, 0.5));
+    }
+    
+    /* Уменьшаем амплитуду движения на мобильных */
+    @keyframes floatLeft {
+        50% { transform: translateY(-51%) translateX(0.2vw) rotate(1deg); }
+    }
+    @keyframes floatRight {
+        50% { transform: translateY(-51%) translateX(-0.2vw) rotate(-1deg); }
+    }
+}
+
+@media (max-width: 480px) {
+    .side-image-left,
+    .side-image-right {
+        display: none; /* Слишком маленький экран - скрываем */
     }
 }
 .overlay-img {
@@ -386,39 +408,17 @@ body, html {
     }
 }
 
-.rotating-svg-container {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 2500px; /* Настройте размер по необходимости */
-    height: 2500px;
-    z-index: -5; /* Убедитесь, что z-index выше фоновых элементов */
-    opacity: 0.1;
-}
-
-.rotating-svg {
-    width: 100%;
-    height: 100%;
-    animation: rotate-circle 30s linear infinite;
-    transform-origin: center center;
-    filter: drop-shadow(0 0 10px rgba(109, 228, 252, 0.7));
-}
-
-@keyframes rotate-circle {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 
 </style>
 
 
 <script>
+
+// JavaScript для полной блокировки горизонтального скролла
+document.body.addEventListener('wheel', function(e) {
+    if (e.deltaY === 0) return;
+    e.preventDefault();
+}, { passive: false });
 
 document.addEventListener('touchmove', function (event) {
     event.preventDefault();
@@ -489,14 +489,9 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
 <div class="overlay-container">
     <div class="background-img"></div>
     <!-- Боковые изображения -->
-    <img src="./img/cart/17 1.png" alt="Левое изображение" class="side-image-left">
-    <img src="./img/cart/37 1.png" alt="Правое изображение" class="side-image-right">
-    
-    <!-- SVG изображение с вращением -->
-    <div class="rotating-svg-container">
-        <img src="./img/warp/rays.svg" alt="Вращающееся изображение" class="rotating-svg">
-    </div>
-    
+    <img src="./img/cart/image_2025-08-15_04-09-07.png" alt="Левое изображение" class="side-image-left">
+    <img src="./img/cart/image_2025-08-15_04-09-49.png" alt="Правое изображение" class="side-image-right">
+
     <div class="overlay-img"></div>
     <div class="overlay-img2"></div>
     <div class="bottom-tab"></div>
@@ -763,7 +758,7 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
       <div class="roririro-silhouette">
         <img src="./img/cart/37 1.png" alt="Силуэт покемона">
       </div>
-      <div class="roririro-reveal">
+      <div class="roririro-reveal1">
         <img src="./img/cart/37 1.png" alt="MissingNo404" class="roririro-image">
         <div class="roririro-info">
           <h3>MissingNo404</h3>
@@ -817,10 +812,32 @@ document.querySelector(".scroll-to-top-btn").addEventListener("click", function 
 </section>
 
 <script>
-document.querySelectorAll('.roririro-card .roririro-card1').forEach(card => {
+document.querySelectorAll('.roririro-card1').forEach(card => {
   card.addEventListener('click', function() {
     // Закрываем все другие карточки
-    document.querySelectorAll('.roririro-card1.roririro-card1').forEach(c => {
+    document.querySelectorAll('.roririro-card1').forEach(c => {
+      if (c !== this) c.classList.remove('active');
+    });
+    
+    // Переключаем текущую карточку
+    this.classList.toggle('active');
+    
+    // Добавляем/убираем анимацию
+    if (this.classList.contains('active')) {
+      this.style.animation = 'none';
+      void this.offsetWidth; // Триггер рефлоу
+      this.querySelector('.roririro-image').style.animation = 'roririro-float 3s ease-in-out infinite';
+    } else {
+      this.querySelector('.roririro-image').style.animation = 'none';
+    }
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.roririro-card').forEach(card => {
+  card.addEventListener('click', function() {
+    // Закрываем все другие карточки
+    document.querySelectorAll('.roririro-card').forEach(c => {
       if (c !== this) c.classList.remove('active');
     });
     
